@@ -2,32 +2,106 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+    --background: 240 56% 98%;
+    --foreground: 233 35% 15%;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+    --card: 0 0% 100%;
+    --card-foreground: 233 35% 15%;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 236 45% 27%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 236 100% 96%;
+    --secondary-foreground: 236 35% 45%;
+
+    --muted: 231 13% 89%;
+    --muted-foreground: 233 7% 72%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 236 44% 55%;
+    --ring: 215 20.2% 65.1%;
+
+    --sidenav: 236 31% 18%;
+
+    --sidenav-item: 0 0% 0% 0;
+    --sidenav-item-foreground: 236 28% 76%;
+
+    --table: ;
+    --table-header: 237 100% 96%;
+    --table-header-foreground: 233 35% 15%;
+    --table-row: 240 100% 99%;
+    --table-row-foreground: 233 35% 15%;
+
+    --badge-info-background: 202 77% 42% / 0.1;
+    --badge-info-foreground: 202 92% 45%;
+    --badge-success-background: 147 77% 37% / 0.12;
+    --badge-success-foreground: 148 77% 37%;
+    --badge-warning-background: 36 65% 93%;
+    --badge-warning-foreground: 36 100% 44%;
+    --badge-danger-background: 0 100% 42% / 0.08;
+    --badge-danger-foreground: 0 100% 42%;
+    --badge-muted-background: 225 7% 11% / 0.08;
+    --badge-muted-foreground: 233 6% 11%;
+
+    --radius: 0.5rem;
   }
+
+  .active {
+    --sidenav-item: 236 28% 55%;
+    --sidenav-item-foreground: 0 0% 100%;
+
+    --primary: 236 41% 41%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 236 42% 86%;
+    --secondary-foreground: 236 35% 45%;
+
+    --destructive: 0 84.2 60.2%;
+    --destructive-foreground: 0 0% 98%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+
+  /* body {
+    @apply bg-background text-foreground;
+  } */
 }
