@@ -31,7 +31,7 @@ export default function MyMap(props: any) {
   const position5 = [-3.5489655, 128.3357549]
   const zoom = 11
 
-  return <MapContainer preferCanvas={false} center={position} zoom={zoom} style={{ height: "53vh", width: "100vw" }}>
+  return <MapContainer preferCanvas={false} center={position} zoom={zoom} style={{ height: "53vh", width: "100vw", zIndex: 0 }}>
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
