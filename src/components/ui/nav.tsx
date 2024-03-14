@@ -78,7 +78,7 @@ export default function Nav() {
           <PopoverTrigger asChild>
       <Card className="divide-y rounded-md border shadow-white cursor-pointer">
         <CardContent className="flex items-center px-1 py-2">
-        <ConfigProvider colors={["#60a5fa", "#60a5fa"]}>
+        <ConfigProvider colors={["#60a5fa"]}>
             <Avatar
               className=""
               name={"Carolus Nurtyandi" || "N N"}

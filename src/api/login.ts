@@ -7,12 +7,12 @@ interface LoginRequestProps {
   password: string;
 }
 
-export async function loginRequest({ body }: LoginRequestProps): Promise<any> {
+export async function loginRequest(): Promise<any> {
   try {
     const { data } = await axios({
       method: "POST",
       url: "/auth/sign-in",
-      data: body,
+      // data: body,
     });
 
     return Promise.resolve(data);

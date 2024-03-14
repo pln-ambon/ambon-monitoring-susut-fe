@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { Eye, EyeOff } from 'lucide-react';
 
-import { AppDispatchContext } from "@/components/pages/context";
+// import { AppDispatchContext } from "@/components/pages/context";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -22,7 +22,7 @@ import { loginRequest } from "@/api/login";
 
 function LoginForm() {
   const router = useRouter();
-  const dispatch = React.useContext(AppDispatchContext);
+  // const dispatch = React.useContext(AppDispatchContext);
   const [showPassword, setShowPassword] = React.useState<boolean>(false)
 
   const formSchema = z.object({
