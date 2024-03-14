@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function TableInfo() {
   return (
-    <div className="flex flex-col w-full font-bold rounded-lg overflow-hidden bg-gray-50">
+    <div className="flex flex-col w-full font-bold rounded-lg overflow-hidden">
       <div className="bg-blue-400 text-center font-bold text-xl p-4 text-white">
         SISTEM AMBON
       </div>

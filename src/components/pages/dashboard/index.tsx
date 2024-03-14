@@ -1,7 +1,11 @@
+"use client"
+import React from "react";
 import TableInfo from "./components/table-info";
 import TableDetail from "./components/table-detail"
 import GrafikSistem from "./components/grafik-sistem"
-import GambarSistem from "./components/gambar-sistem"
+import dynamic from 'next/dynamic';
+const Map = dynamic(() => import("@/components/pages/dashboard/components/gambar-sistem"), { ssr: false });
+
 
 export default function Dashboard() {
   return (
@@ -21,9 +25,9 @@ export default function Dashboard() {
       {/* Gambar Sistem */}
       <div className="grid lg:grid-cols-12 gap-4" id="#sistem">
         <div className="col-span-12 lg:col-span-9 bg-gray-50 rounded-lg overflow-hidden shadow-md">
-          <GambarSistem/>
+          <Map />
         </div>
-        <div className="col-span-12 lg:col-span-3 shadow-md">
+        <div className="col-span-12 lg:col-span-3 shadow-md bg-gray-50 rounded-md">
           <TableInfo />
         </div>
       </div>
