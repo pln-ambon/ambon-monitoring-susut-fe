@@ -22,6 +22,7 @@
     "axios-auth-refresh": "^3.3.6",
     "chart.js": "^4.4.2",
     "class-variance-authority": "^0.7.0",
+    "faker": "^6.6.6",
     "leaflet": "^1.9.4",
     "leaflet-defaulticon-compatibility": "^0.1.2",
     "lucide-react": "^0.354.0",

@@ -24,18 +24,18 @@ const options: ChartOptions<"doughnut"> = {
   },
   // cutout: ,
   maintainAspectRatio: true,
-  aspectRatio: 2,
+  aspectRatio: 1.5,
 };
 
 const GrafikSistem = () => {
   return (
-    <div className="bg-gray-50 p-4 rounded-lg w-full shadow-md">
-      <p className="font-semibold py-2 text-xl">Grafik Beban Sistem Ambon</p>
-      <div className="flex gap-2">
+    <div className="bg-gray-50 p-4 rounded-lg w-full shadow-md h-full">
+      <p className="font-semibold text-gray-500 text-lg mb-4">Grafik Beban Sistem Ambon</p>
+      <DoughnutChart data={data} options={options} />
+      <div className="flex gap-2 mt-4">
         <div className="bg-[#60a5fa] text-white text-xs flex items-center rounded px-2">Beban A</div>
         <div className="bg-[#2EBDB5] text-white text-xs flex items-center rounded px-2">Beban B</div>
       </div>
-      <DoughnutChart data={data} options={options} />
     </div>
     
   );

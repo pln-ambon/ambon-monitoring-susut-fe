@@ -1,84 +1,59 @@
-// import Image from "next/image";
-// import * as AspectRatio from '@radix-ui/react-aspect-ratio';
+import Image from "next/image";
+import AmbonGif from "@/components/icon/ambon.gif"
 
-// import SistemSld from "@/components/icon/sistem.jpg"
+export default function GambarSistem() {
+  return (
+    <div className="relative text-xs">
 
-// export default function GambarSistem() {
-//   return (
-//     <AspectRatio.Root ratio={16/5}>
-//       <Image className="w-full" src={SistemSld} alt="SLD Image" />
-//       {/* <div className="flex justify-center h-full items-center">
-//         Gambar System(Menyusul)
-//       </div> */}
-//       </AspectRatio.Root>
-//   );
-// }
+      <Image className="w-full rounded-lg" src={AmbonGif} alt="SLD Image" />
+    
+      {/* ambon peaker */}
+      <div className="absolute flex flex-col text-center top-28 right-28 font-extrabold text-yellow-300">
+        <span>PLTMG</span>
+        <span>AMBON PEAKER</span>
+        <span>38 MW</span>
+        <span>1500 KV</span>
+      </div>
 
-"use client"
 
-import { MapContainer, LayersControl, Marker, TileLayer, Tooltip, Popup } from "react-leaflet"
-import "leaflet/dist/leaflet.css"
-import "leaflet-defaulticon-compatibility"
-import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css"
+      {/* BMPP */}
+      <div className="absolute flex flex-col text-center top-48 right-10 font-extrabold text-yellow-300">
+        <span>BMPP</span>
+        <span>38 MW</span>
+        <span>1500 KV</span>
+      </div>
 
-export default function MyMap(props: any) {
-  // const { position, zoom } = props
 
-  const position = [-3.6628412, 128.1604411]
-  const position2 = [-3.6891949, 128.2225471]
-  const position3 = [-3.6158404, 128.2623391]
-  const position4 = [-3.6151473, 128.2625465]
-  const position5 = [-3.5489655, 128.3357549]
-  const zoom = 11
+      {/* GI PASSO */}
+      <div className="absolute flex flex-col text-center top-52 right-48 font-extrabold text-red-500">
+        <span>GI PASSO</span>
+      </div>
 
-  return <MapContainer preferCanvas={false} center={position} zoom={zoom} style={{ height: "53vh", width: "100vw", zIndex: 0 }}>
-    <TileLayer
-      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    />
-    <Marker position={position}>
-      <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
-      </Popup>
-      <Tooltip>
-      GI Wayame
-      </Tooltip>
-    </Marker>
+      {/* GI PASSO */}
+      <div className="absolute flex flex-col text-center top-56 right-[26em] font-extrabold text-yellow-300">
+        <span>PLTD POKA</span>
+        <span>38 MW</span>
+        <span>1500 KV</span>
+      </div>
 
-    <Marker position={position2}>
-      <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
-      </Popup>
-      <Tooltip>
-      GI Sirimau
-      </Tooltip>
-    </Marker>
 
-    <Marker position={position3}>
-      <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
-      </Popup>
-      <Tooltip>
-      GI Passo
-      </Tooltip>
-    </Marker>
+      {/*PLTD HATIVE */}
+      <div className="absolute flex flex-col text-center top-[20rem] right-[24em] font-extrabold text-yellow-300">
+        <span>PLTD HATIVE</span>
+        <span>38 MW</span>
+        <span>1500 KV</span>
+      </div>
 
-    <Marker position={position4}>
-      <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
-      </Popup>
-      <Tooltip>
-      GIS Passo
-      </Tooltip>
-    </Marker>
+      {/* GI H BESAR */}
+      <div className="absolute flex flex-col text-center top-[20rem] right-[38em] font-extrabold text-red-500">
+        <span>GI HATIVE BESAR</span>
+      </div>
 
-    <Marker position={position5}>
-      <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
-      </Popup>
-      <Tooltip>
-      GI Waai
-      </Tooltip>
-    </Marker>
-  </MapContainer>
+       {/* GI SIRIMAU */}
+       <div className="absolute flex flex-col text-center top-[25rem] right-[24em] font-extrabold text-red-500">
+        <span>GI SIRIMAU</span>
+      </div>
+    </div>
+
+  );
 }
