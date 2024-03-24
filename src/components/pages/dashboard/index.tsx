@@ -1,22 +1,22 @@
-"use client"
+"use client";
 import React from "react";
 import TableInfo from "./components/table-info";
-import TableDetail from "./components/table-detail"
-import GrafikSistem from "./components/grafik-sistem"
-import GambarSistem from "./components/gambar-sistem"
-import dynamic from 'next/dynamic';
+import TableDetail from "./components/table-detail";
+import GrafikSistem from "./components/grafik-sistem";
+import GambarSistem from "./components/gambar-sistem";
+import dynamic from "next/dynamic";
 // const Map = dynamic(() => import("@/components/pages/dashboard/components/gambar-sistem"), { ssr: false });
-import LineChart from "./components/line-chart"
-
+import LineChart from "./components/line-chart";
 
 export default function Dashboard() {
-  const Map = React.useMemo(() => dynamic(
-    () => import('@/components/pages/dashboard/components/map'),
-    { 
-      loading: () => <p className="text-center mt-5">A map is loading</p>,
-      ssr: false
-    }
-  ), [])
+  const Map = React.useMemo(
+    () =>
+      dynamic(() => import("@/components/pages/dashboard/components/map"), {
+        loading: () => <p className="text-center mt-5">A map is loading</p>,
+        ssr: false,
+      }),
+    [],
+  );
   return (
     <div className="flex flex-col gap-4">
       {/* Cuaca */}

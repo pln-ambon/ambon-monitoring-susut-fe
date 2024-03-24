@@ -19,7 +19,7 @@ const DoughnutChart = ({ data, options }: DoughnutChartProps) => {
   return (
     <>
       <div>
-        <Doughnut data={data} options={options}/>
+        <Doughnut data={data} options={options} />
       </div>
     </>
   );

@@ -11,7 +11,8 @@ const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "PLN UP3B - Monitoring Kelistrikan",
-  description: "Monitoring sistem kelistrikan di PLN Wilayah Maluku dan Maluku Utara",
+  description:
+    "Monitoring sistem kelistrikan di PLN Wilayah Maluku dan Maluku Utara",
 };
 
 export default function RootLayout({

@@ -4,9 +4,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
-import { Eye, EyeOff } from 'lucide-react';
+import { Eye, EyeOff } from "lucide-react";
 
-// import { AppDispatchContext } from "@/components/pages/context";
+import { AppDispatchContext } from "@/components/pages/context";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -22,8 +22,8 @@ import { loginRequest } from "@/api/login";
 
 function LoginForm() {
   const router = useRouter();
-  // const dispatch = React.useContext(AppDispatchContext);
-  const [showPassword, setShowPassword] = React.useState<boolean>(false)
+  const dispatch = React.useContext(AppDispatchContext);
+  const [showPassword, setShowPassword] = React.useState<boolean>(false);
 
   const formSchema = z.object({
     email: z.string().email(),
@@ -45,21 +45,26 @@ function LoginForm() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    // try {
-    //   await loginRequest({
-    //     body: values,
-    //   });
-    //   router.push("/");
-    // } catch (error) {
-    //   dispatch({
-    //     type: "SET",
-    //     modalType: "ERROR",
-    //     isError: true,
-    //     title: "Login Error",
-    //     message: error.message,
-    //   });
-    // }
-    router.push("/")
+    try {
+      const response = await loginRequest({
+        body: values,
+      });
+
+      // console.log(response, "<< data");
+
+      router.push("/");
+    } catch (error) {
+      console.log(error.message, "<< error");
+
+      dispatch({
+        type: "SET",
+        modalType: "ERROR",
+        isError: true,
+        title: "Login Error",
+        message: error.message,
+      });
+    }
+    // router.push("/")
   }
   return (
     <Form {...form}>
@@ -92,11 +97,23 @@ function LoginForm() {
                 <label className="text-sm text-[#9FA0BC]">Password</label>
                 <FormControl>
                   <div className="relative">
-                  <Input placeholder="Ketik Password" {...field} type={`${showPassword ? "text" : "password"}`}/>
-                  { !showPassword && <Eye className="absolute top-2 right-4 font-light cursor-pointer hover:scale-105" onClick={() => setShowPassword(!showPassword)}/>}
-                  { showPassword && 
-                  <EyeOff className="absolute top-2 right-4 font-light cursor-pointer hover:scale-105" onClick={() => setShowPassword(!showPassword)}/>
-                  }
+                    <Input
+                      placeholder="Ketik Password"
+                      {...field}
+                      type={`${showPassword ? "text" : "password"}`}
+                    />
+                    {!showPassword && (
+                      <Eye
+                        className="absolute top-2 right-4 font-light cursor-pointer hover:scale-105"
+                        onClick={() => setShowPassword(!showPassword)}
+                      />
+                    )}
+                    {showPassword && (
+                      <EyeOff
+                        className="absolute top-2 right-4 font-light cursor-pointer hover:scale-105"
+                        onClick={() => setShowPassword(!showPassword)}
+                      />
+                    )}
                   </div>
                 </FormControl>
                 <FormMessage />

@@ -7,7 +7,7 @@ import ClientProvider from "./client-providers";
 function PageProvider({ children }: { children: React.ReactNode }) {
   return (
     // <AppPageProvider>
-      <ClientProvider>{children}</ClientProvider>
+    <ClientProvider>{children}</ClientProvider>
     // </AppPageProvider>
   );
 }

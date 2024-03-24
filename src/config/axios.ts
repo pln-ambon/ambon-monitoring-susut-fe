@@ -3,13 +3,19 @@ import createAuthRefreshInterceptor from "axios-auth-refresh";
 
 const instance = axios.create({
   baseURL: process.env.APP_BASE_URL,
-  timeout: 10000,
+  // timeout: 10000,
+  withCredentials: true,
 });
 
-instance.interceptors.request.use(async (config) => {
-  // do something
-  return config;
-});
+instance.interceptors.request.use(
+  function (config) {
+    // console.log('Request Headers:', config.headers);
+    return config;
+  },
+  function (error) {
+    return Promise.reject(error);
+  },
+);
 
 // this function will be invoke if response code = 401
 const refreshAuthLogic = async () => {
