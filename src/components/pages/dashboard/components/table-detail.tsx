@@ -1,9 +1,6 @@
+"use client"
 import { Fragment } from "react";
 import { useQuery } from "@tanstack/react-query";
-
-import { roundNumber } from "@/utils/rounded";
-
-import { getTableDetail } from "@/api/table_detail";
 
 import {
   Accordion,
@@ -12,11 +9,16 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import { roundNumber } from "@/utils/rounded";
+import { getTableDetail } from "@/api/table_detail";
+
 export default function TableDetail() {
   const { data } = useQuery({
     queryKey: ["/table_detail"],
     queryFn: () => getTableDetail(),
     staleTime: 1000,
+    refetchInterval: 60000, // 1 menit
+    refetchIntervalInBackground: true
   });
 
   return (

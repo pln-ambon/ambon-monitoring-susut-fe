@@ -12,6 +12,8 @@ export default function TableInfo() {
     queryKey: ["/table_total"],
     queryFn: () => getTotalTable(),
     staleTime: 1000,
+    refetchInterval: 60000, // 1 menit
+    refetchIntervalInBackground: true
   });
 
   return (

@@ -14,6 +14,8 @@ const GrafikSistem = () => {
     queryKey: ["/grafik_beban"],
     queryFn: () => getDataGrafikBeban(),
     staleTime: 1000,
+    refetchInterval: 60000, // 1 menit
+    refetchIntervalInBackground: true
   });
 
 const data = {

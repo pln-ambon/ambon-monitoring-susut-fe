@@ -12,6 +12,8 @@ export default function GambarSistem() {
     queryKey: ["/data_map"],
     queryFn: () => getDataMap(),
     staleTime: 1000,
+    refetchInterval: 60000, // 1 menit
+    refetchIntervalInBackground: true
   });
 
   return (

@@ -2,7 +2,7 @@
 
 import axios from "@/config/axios";
 
-export async function getTableDetail(): Promise<any> {
+export async function getTableDetail() {
   try {
     const { data } = await axios({
       method: "GET",

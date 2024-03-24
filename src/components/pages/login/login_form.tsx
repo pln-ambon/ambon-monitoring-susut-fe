@@ -24,6 +24,7 @@ function LoginForm() {
   const router = useRouter();
   const dispatch = React.useContext(AppDispatchContext);
   const [showPassword, setShowPassword] = React.useState<boolean>(false);
+  const [loading, setLoading] = React.useState<boolean>(false)
 
   const formSchema = z.object({
     email: z.string().email(),
@@ -45,16 +46,14 @@ function LoginForm() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    setLoading(true)
     try {
       const response = await loginRequest({
         body: values,
       });
 
-      // console.log(response, "<< data");
-
       router.push("/");
     } catch (error) {
-      console.log(error.message, "<< error");
 
       dispatch({
         type: "SET",
@@ -62,9 +61,10 @@ function LoginForm() {
         isError: true,
         title: "Login Error",
         message: error.message,
-      });
+      }); 
+    } finally {
+      setLoading(false)
     }
-    // router.push("/")
   }
   return (
     <Form {...form}>
