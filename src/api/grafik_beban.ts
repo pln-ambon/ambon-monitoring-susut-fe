@@ -12,7 +12,7 @@ export async function getDataGrafikBeban(): Promise<any> {
 
     return data || {};
   } catch (error) {
-    console.log(error, "<< error table total");
+    // console.log(error, "<< error table total");
     return {};
   }
 }

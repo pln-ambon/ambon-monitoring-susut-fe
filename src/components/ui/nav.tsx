@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Avatar, { ConfigProvider } from "react-avatar";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/utils/router";
 import { CircleAlert } from "lucide-react";
 import { LogOut } from "lucide-react";
 

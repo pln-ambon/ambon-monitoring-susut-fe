@@ -14,8 +14,7 @@ export async function getTotalTable(): Promise<any> {
 
     return data || {};
   } catch (error) {
-    console.log(error, "<< error table total");
-    // return Promise.reject(error);
+    // console.log(error, "<< error table total");
     return {};
   }
 }

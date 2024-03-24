@@ -3,8 +3,8 @@ import React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
-import { useRouter } from "next/navigation";
 import { Eye, EyeOff } from "lucide-react";
+import { useRouter } from "@/utils/router";
 
 import { AppDispatchContext } from "@/components/pages/context";
 
@@ -51,7 +51,6 @@ function LoginForm() {
       const response = await loginRequest({
         body: values,
       });
-
       router.push("/");
     } catch (error) {
 
@@ -122,8 +121,8 @@ function LoginForm() {
           )}
         />
 
-        <Button type="submit" className="w-full">
-          Masuk
+        <Button type="submit" className="w-full" disabled={loading}>
+          { loading ? "Loading ..." : "Masuk"}
         </Button>
       </form>
     </Form>

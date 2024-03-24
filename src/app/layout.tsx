@@ -20,6 +20,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html lang="en" className="text-gray-600">
       <body className={nunito.className}>

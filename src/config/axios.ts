@@ -1,15 +1,18 @@
 import axios from "axios";
 import createAuthRefreshInterceptor from "axios-auth-refresh";
+import { cookies } from "next/headers";
 
 const instance = axios.create({
   baseURL: process.env.APP_BASE_URL,
-  // timeout: 10000,
-  withCredentials: true,
+  timeout: 60000,
 });
 
 instance.interceptors.request.use(
   function (config) {
-    // console.log('Request Headers:', config.headers);
+    const tokenCookie = cookies().get("token")
+    if (tokenCookie) {
+      config.headers.Cookie = `${tokenCookie.name}=${tokenCookie.value}`
+    }
     return config;
   },
   function (error) {

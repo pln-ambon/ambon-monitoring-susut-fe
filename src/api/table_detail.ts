@@ -12,7 +12,7 @@ export async function getTableDetail() {
 
     return data || {};
   } catch (error) {
-    console.log(error, "<< error table total");
+    // console.log(error, "<< error table detail");
     return {};
   }
 }
