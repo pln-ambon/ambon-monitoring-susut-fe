@@ -24,7 +24,7 @@ function LoginForm() {
   const router = useRouter();
   const dispatch = React.useContext(AppDispatchContext);
   const [showPassword, setShowPassword] = React.useState<boolean>(false);
-  const [loading, setLoading] = React.useState<boolean>(false)
+  const [loading, setLoading] = React.useState<boolean>(false);
 
   const formSchema = z.object({
     email: z.string().email(),
@@ -46,23 +46,22 @@ function LoginForm() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    setLoading(true)
+    setLoading(true);
     try {
       const response = await loginRequest({
         body: values,
       });
       router.push("/");
     } catch (error) {
-
       dispatch({
         type: "SET",
         modalType: "ERROR",
         isError: true,
         title: "Login Error",
         message: error.message,
-      }); 
+      });
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   }
   return (
@@ -122,7 +121,7 @@ function LoginForm() {
         />
 
         <Button type="submit" className="w-full" disabled={loading}>
-          { loading ? "Loading ..." : "Masuk"}
+          {loading ? "Loading ..." : "Masuk"}
         </Button>
       </form>
     </Form>

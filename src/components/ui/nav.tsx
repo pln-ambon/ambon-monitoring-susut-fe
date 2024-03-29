@@ -53,10 +53,10 @@ export default function Nav() {
           </div>
         </DialogContent>
       </Dialog>
-      <div className="flex items-center justify-between bg-white px-5 py-1 sticky top-0 z-10 shadow-sm">
-        <div className="flex gap-4 font-semibold">
+      <div className="flex items-center justify-between bg-gray-100 px-5 py-1 sticky top-0 z-10 shadow-lg">
+        <div className="flex gap-4">
           <Image className="h-12 w-8" src={Logo} alt="PLN Logo" />
-          <div className="hidden md:flex flex-col">
+          <div className="hidden md:flex flex-col justify-end">
             <span>PT PLN(Persero)</span>
             <span>Untuk Induk Wilayah Maluku dan Maluku Utara</span>
           </div>
@@ -67,19 +67,19 @@ export default function Nav() {
           <div className="flex justify-center items-end py-2">
             <a
               href="#dashboard"
-              className="px-4 cursor-pointer hover:border-b-2 border-blue-500 hover:text-blue-500 hover:scale-105 transition-transform font-semibold"
+              className="px-4 cursor-pointer hover:border-b-2 border-blue-500 hover:text-blue-500 hover:scale-105 transition-transform"
             >
               Dashboard
             </a>
             <a
               href="#sistem"
-              className="px-4 cursor-pointer hover:border-b-2 border-blue-500 hover:text-blue-500 hover:scale-105 transition-transform font-semibold"
+              className="px-4 cursor-pointer hover:border-b-2 border-blue-500 hover:text-blue-500 hover:scale-105 transition-transform"
             >
               Monitoring Sistem
             </a>
             <a
               href="#susut"
-              className="px-4 cursor-pointer hover:border-b-2 border-blue-500 hover:text-blue-500 hover:scale-105 transition-transform font-semibold"
+              className="px-4 cursor-pointer hover:border-b-2 border-blue-500 hover:text-blue-500 hover:scale-105 transition-transform"
             >
               Monitoring Susut
             </a>

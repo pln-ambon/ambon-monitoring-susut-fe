@@ -9,9 +9,9 @@ const instance = axios.create({
 
 instance.interceptors.request.use(
   function (config) {
-    const tokenCookie = cookies().get("token")
+    const tokenCookie = cookies().get("token");
     if (tokenCookie) {
-      config.headers.Cookie = `${tokenCookie.name}=${tokenCookie.value}`
+      config.headers.Cookie = `${tokenCookie.name}=${tokenCookie.value}`;
     }
     return config;
   },

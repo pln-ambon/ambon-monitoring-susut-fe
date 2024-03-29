@@ -1,4 +1,4 @@
-import * as NProgress from 'nprogress';
+import * as NProgress from "nprogress";
 import { useRouter as useBaseRouter } from "next/navigation";
 
 export function useRouter() {

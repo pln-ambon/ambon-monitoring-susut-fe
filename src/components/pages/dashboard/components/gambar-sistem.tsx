@@ -13,7 +13,7 @@ export default function GambarSistem() {
     queryFn: () => getDataMap(),
     staleTime: 1000,
     refetchInterval: 60000, // 1 menit
-    refetchIntervalInBackground: true
+    refetchIntervalInBackground: true,
   });
 
   return (

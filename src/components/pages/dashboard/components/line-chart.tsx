@@ -7,6 +7,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  Filler
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 // import faker from 'faker';
@@ -19,6 +20,7 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
+  Filler
 );
 
 export default function LineChart() {
@@ -38,38 +40,42 @@ export default function LineChart() {
       {
         label: "PLTMG AMBON PEAKER",
         data: [52, 54, 68, 89, 88, 52, 55],
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "rgb(156, 173, 206)",
+        backgroundColor: "rgba(156, 173, 206, 0.5)",
+        borderWidth: 2,
         yAxisID: "y",
-        fill: true,
-        tension: 0.1,
+        fill: "origin",
+        tension: 0,
       },
       {
         label: "BMPP",
         data: [65, 75, 62, 65, 69, 59, 62],
-        borderColor: "rgb(53, 162, 235)",
-        backgroundColor: "rgba(53, 162, 235, 0.5)",
+        borderColor: "rgb(126, 196, 207)",
+        backgroundColor: "rgba(126, 196, 207, 0.5)",
         yAxisID: "y",
-        fill: true,
-        tension: 0.1,
+        borderWidth: 2,
+        fill: "origin",
+        tension: 0,
       },
       {
         label: "PLTD POKA",
         data: [75, 55, 86, 98, 88, 55, 66],
-        borderColor: "rgb(53, 162, 100)",
-        backgroundColor: "rgba(53, 162, 100, 0.5)",
+        borderColor: "rgb(212, 175, 185)",
+        backgroundColor: "rgba(212, 175, 185, 0.5)",
+        borderWidth: 2,
         yAxisID: "y",
-        fill: true,
-        tension: 0.1,
+        fill: "origin",
+        tension: 0,
       },
       {
         label: "PLTD HATIVE",
         data: [98, 75, 86, 85, 75, 85, 65],
-        borderColor: "rgb(53, 200, 262)",
-        backgroundColor: "rgba(53, 162, 235, 0.5)",
+        borderColor: "rgb(209, 207, 226)",
+        backgroundColor: "rgba(209, 207, 226, 0.5)",
+        borderWidth: 2,
         yAxisID: "y",
         fill: true,
-        tension: 0.1,
+        tension: 0,
       },
     ],
   };
@@ -105,7 +111,7 @@ export default function LineChart() {
   };
 
   return (
-    <div className="bg-gray-50 p-8 rounded-lg">
+    <div className="bg-gray-100 p-8 rounded-lg">
       <Line data={data} options={options} height={80} />
     </div>
   );

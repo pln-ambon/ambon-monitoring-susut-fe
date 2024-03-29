@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <main className="min-h-screen p-8 bg-gray-200">
+      <main className="min-h-screen">
         <Dashboard />
       </main>
     </>

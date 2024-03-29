@@ -13,54 +13,54 @@ export default function TableInfo() {
     queryFn: () => getTotalTable(),
     staleTime: 1000,
     refetchInterval: 60000, // 1 menit
-    refetchIntervalInBackground: true
+    refetchIntervalInBackground: true,
   });
 
   return (
-    <div className="flex flex-col w-full font-bold rounded-lg overflow-hidden bg-gray-50 h-full">
-      <div className="bg-blue-400 text-center font-bold text-xl p-4 text-white">
+    <div className="absolute top-8 right-5 bg-cyan-900 text-white rounded pb-2 px-5 w-[380px]">
+      <div className="text-center font-semibold text-xl p-4 text-white">
         SISTEM AMBON
       </div>
       <div className="flex flex-col justify-between h-full">
-        <div className="grid grid-cols-2 px-6 border border-b-0 h-full items-center">
-          <span className="font-semibold text-gray-500">Tegangang</span>
-          <span className="text-xl text-blue-400">
+        <div className="grid grid-cols-2 py-2">
+          <span className="">TEGANGAN</span>
+          <span className=" text-amber-400 text-right">
             {roundNumber(data?.voltage)} KV
           </span>
         </div>
-        <div className="grid grid-cols-2 px-6 border border-b-0 h-full items-center">
-          <span className="font-semibold text-gray-500">Arus</span>
-          <span className="text-xl text-blue-400">
+        <div className="grid grid-cols-2 py-2">
+          <span className="">ARUS</span>
+          <span className=" text-amber-400 text-right">
             {roundNumber(data?.curent)} A
           </span>
         </div>
-        <div className="grid grid-cols-2 px-6 border border-b-0 h-full items-center">
-          <span className="font-semibold text-gray-500">Frekuensi</span>
-          <span className="text-xl text-blue-400">
+        <div className="grid grid-cols-2 py-2">
+          <span className="">FREKUENSI</span>
+          <span className=" text-amber-400 text-right">
             {roundNumber(data?.freq)} Hz
           </span>
         </div>
-        <div className="grid grid-cols-2 px-6 border border-b-0 h-full items-center">
-          <span className="font-semibold text-gray-500">CosPhi</span>
-          <span className="text-xl text-blue-400">
+        <div className="grid grid-cols-2 py-2">
+          <span className="">COSPHI</span>
+          <span className=" text-amber-400 text-right">
             {roundNumber(data?.cos_phi)}
           </span>
         </div>
-        <div className="grid grid-cols-2 px-6 border border-b-0 h-full items-center">
-          <span className="font-semibold text-gray-500">Daya</span>
-          <span className="text-xl text-blue-400">
+        <div className="grid grid-cols-2 py-2">
+          <span className="">DAYA</span>
+          <span className=" text-amber-400 text-right">
             {roundNumber(data?.daya)} MW
           </span>
         </div>
-        <div className="grid grid-cols-2 px-6 border border-b-0 h-full items-center">
-          <span className="font-semibold text-gray-500">DMP</span>
-          <span className="text-xl text-blue-400">
+        <div className="grid grid-cols-2 py-2">
+          <span className="">DMP</span>
+          <span className=" text-amber-400 text-right">
             {roundNumber(data?.dmp)} MW
           </span>
         </div>
-        <div className="grid grid-cols-2 px-6 border border-b-0 rounded-b-lg h-full items-center">
-          <span className="font-semibold text-gray-500">Susut Tranmisi</span>
-          <span className="text-xl text-blue-400">- MW</span>
+        <div className="grid grid-cols-2 py-2 items-center">
+          <span className="">SUSUT TRANSMISI</span>
+          <span className=" text-amber-400 text-right">- MW</span>
         </div>
       </div>
     </div>

@@ -1,22 +1,21 @@
 "use client";
 import React from "react";
 import { AppPageProvider } from "@/components/pages/context";
-import { usePathname } from 'next/navigation'
-import * as NProgress from 'nprogress';
+import { usePathname } from "next/navigation";
+import * as NProgress from "nprogress";
 
 import ClientProvider from "./client-providers";
 
 function PageProvider({ children }: { children: React.ReactNode }) {
-
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   React.useEffect(() => {
     NProgress.done();
-  }, [pathname])
+  }, [pathname]);
 
   return (
     <AppPageProvider>
-    <ClientProvider>{children}</ClientProvider>
+      <ClientProvider>{children}</ClientProvider>
     </AppPageProvider>
   );
 }

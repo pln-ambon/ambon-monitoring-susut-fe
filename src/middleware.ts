@@ -7,9 +7,8 @@ export function middleware(request: NextRequest) {
   // const req = NextRequest.next()
 
   // console.log(req, "<< req");
-  
+
   // console.log(request, "<< request");
-  
 
   // already login
   if (token) {
