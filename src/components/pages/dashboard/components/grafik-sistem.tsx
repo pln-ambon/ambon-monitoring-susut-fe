@@ -35,6 +35,12 @@ const GrafikSistem = () => {
       legend: {
         display: false,
       },
+      datalabels: {
+        formatter: (value, context) => {
+          const dataIndex = context.dataIndex;
+          return context.chart.data.labels[dataIndex];
+        },
+      },
     },
     // cutout: ,
     maintainAspectRatio: true,

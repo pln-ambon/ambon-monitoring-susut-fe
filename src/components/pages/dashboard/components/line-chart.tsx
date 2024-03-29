@@ -7,10 +7,12 @@ import {
   Title,
   Tooltip,
   Legend,
-  Filler
+  Filler,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-// import faker from 'faker';
+import { useQuery } from "@tanstack/react-query";
+
+import { getDataTrend } from "@/api/data_trend";
 
 ChartJS.register(
   CategoryScale,
@@ -20,28 +22,36 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  Filler
+  Filler,
 );
 
 export default function LineChart() {
-  const labels = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-  ];
+  const { data: dataTrend } = useQuery({
+    queryKey: ["/data_trend"],
+    queryFn: () => getDataTrend(),
+    staleTime: 1000,
+    refetchInterval: 60000, // 1 menit
+    refetchIntervalInBackground: true,
+  });
 
   const data = {
-    labels: labels,
+    labels: dataTrend?.["PLTMG WAAI"]?.labels,
     datasets: [
       {
-        label: "PLTMG AMBON PEAKER",
-        data: [52, 54, 68, 89, 88, 52, 55],
-        borderColor: "rgb(156, 173, 206)",
-        backgroundColor: "rgba(156, 173, 206, 0.5)",
+        label: "PLTD HATIVE",
+        data: dataTrend?.["PLTD HATIVE KECIL"]?.datasets,
+        borderColor: "rgb(209, 207, 226)",
+        backgroundColor: "rgba(209, 207, 226, 0.9)",
+        borderWidth: 2,
+        yAxisID: "y",
+        fill: true,
+        tension: 0,
+      },
+      {
+        label: "PLTD POKA",
+        data: dataTrend?.["PLTD POKA"]?.datasets,
+        borderColor: "rgb(212, 175, 185)",
+        backgroundColor: "rgba(212, 175, 185, 0.9)",
         borderWidth: 2,
         yAxisID: "y",
         fill: "origin",
@@ -49,32 +59,22 @@ export default function LineChart() {
       },
       {
         label: "BMPP",
-        data: [65, 75, 62, 65, 69, 59, 62],
+        data: dataTrend?.["BMPP WAAI"]?.datasets,
         borderColor: "rgb(126, 196, 207)",
-        backgroundColor: "rgba(126, 196, 207, 0.5)",
+        backgroundColor: "rgba(126, 196, 207, 0.9)",
         yAxisID: "y",
         borderWidth: 2,
         fill: "origin",
         tension: 0,
       },
       {
-        label: "PLTD POKA",
-        data: [75, 55, 86, 98, 88, 55, 66],
-        borderColor: "rgb(212, 175, 185)",
-        backgroundColor: "rgba(212, 175, 185, 0.5)",
+        label: "PLTMG AMBON PEAKER",
+        data: dataTrend?.["PLTMG WAAI"]?.datasets,
+        borderColor: "rgb(156, 173, 206)",
+        backgroundColor: "rgba(156, 173, 206, 0.9)",
         borderWidth: 2,
         yAxisID: "y",
         fill: "origin",
-        tension: 0,
-      },
-      {
-        label: "PLTD HATIVE",
-        data: [98, 75, 86, 85, 75, 85, 65],
-        borderColor: "rgb(209, 207, 226)",
-        backgroundColor: "rgba(209, 207, 226, 0.5)",
-        borderWidth: 2,
-        yAxisID: "y",
-        fill: true,
         tension: 0,
       },
     ],

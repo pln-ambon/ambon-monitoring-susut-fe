@@ -17,7 +17,7 @@ export default function TableInfo() {
   });
 
   return (
-    <div className="absolute top-8 right-5 bg-cyan-900 text-white rounded pb-2 px-5 w-[380px]">
+    <div className="absolute top-5 right-5 bg-cyan-900 text-white rounded pb-2 px-5 w-[380px]">
       <div className="text-center font-semibold text-xl p-4 text-white">
         SISTEM AMBON
       </div>
