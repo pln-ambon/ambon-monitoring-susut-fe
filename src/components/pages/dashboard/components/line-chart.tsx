@@ -41,7 +41,7 @@ export default function LineChart() {
         label: "PLTD HATIVE",
         data: dataTrend?.["PLTD HATIVE KECIL"]?.datasets,
         borderColor: "rgb(209, 207, 226)",
-        backgroundColor: "rgba(209, 207, 226, 0.9)",
+        backgroundColor: "rgba(209, 207, 226, 0.7)",
         borderWidth: 2,
         yAxisID: "y",
         fill: true,
@@ -51,7 +51,7 @@ export default function LineChart() {
         label: "PLTD POKA",
         data: dataTrend?.["PLTD POKA"]?.datasets,
         borderColor: "rgb(212, 175, 185)",
-        backgroundColor: "rgba(212, 175, 185, 0.9)",
+        backgroundColor: "rgba(212, 175, 185, 0.7)",
         borderWidth: 2,
         yAxisID: "y",
         fill: "origin",
@@ -61,7 +61,7 @@ export default function LineChart() {
         label: "BMPP",
         data: dataTrend?.["BMPP WAAI"]?.datasets,
         borderColor: "rgb(126, 196, 207)",
-        backgroundColor: "rgba(126, 196, 207, 0.9)",
+        backgroundColor: "rgba(126, 196, 207, 0.7)",
         yAxisID: "y",
         borderWidth: 2,
         fill: "origin",
@@ -71,10 +71,20 @@ export default function LineChart() {
         label: "PLTMG AMBON PEAKER",
         data: dataTrend?.["PLTMG WAAI"]?.datasets,
         borderColor: "rgb(156, 173, 206)",
-        backgroundColor: "rgba(156, 173, 206, 0.9)",
+        backgroundColor: "rgba(156, 173, 206, 0.7)",
         borderWidth: 2,
         yAxisID: "y",
         fill: "origin",
+        tension: 0,
+      },
+      {
+        label: "TOTAL",
+        data: dataTrend?.arrTotal,
+        borderColor: "rgb(254, 197, 187)",
+        backgroundColor: "rgba(254, 197, 187, 0.7)",
+        borderWidth: 2,
+        yAxisID: "y",
+        fill: true,
         tension: 0,
       },
     ],
@@ -90,7 +100,7 @@ export default function LineChart() {
     plugins: {
       title: {
         display: true,
-        text: "Trend Beban",
+        text: "Trend Beban (KW)",
       },
     },
     scales: {
@@ -99,6 +109,13 @@ export default function LineChart() {
         display: true,
         position: "left" as const,
       },
+      // xAxes: {
+      //   scaleLabel: {
+      //     display: true,
+      //     labelString: "number of cars",
+      //     fontColor: "color you want",
+      //   }
+      // }
       // y1: {
       //   type: 'linear' as const,
       //   display: true,
