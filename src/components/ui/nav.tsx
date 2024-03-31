@@ -34,7 +34,7 @@ export default function Nav() {
     router.push("/login");
   };
 
-  console.log(cookies.get("full_name"), "<<cookies");
+  console.log(cookies?.get("full_name"), "<<cookies");
   
   return (
     <>
