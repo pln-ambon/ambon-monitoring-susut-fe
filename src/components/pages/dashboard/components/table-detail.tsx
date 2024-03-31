@@ -21,8 +21,6 @@ export default function TableDetail() {
     refetchIntervalInBackground: true,
   });
 
-  console.log(data);
-
   return (
     <div className="flex flex-col w-full rounded overflow-auto overflow-x-auto shadow-md">
       <div className="grid grid-cols-6 text-center">
@@ -219,7 +217,7 @@ export default function TableDetail() {
           {roundNumber(data?.grandTotal?.p)}
         </span>
         <span className="py-2 bg-cyan-900 text-white">
-          {roundNumber(data?.grandTotal?.vAverage)}
+          -
         </span>
       </div>
     </div>

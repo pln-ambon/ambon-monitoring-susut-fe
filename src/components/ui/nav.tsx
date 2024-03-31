@@ -39,7 +39,7 @@ export default function Nav() {
   return (
     <>
       <Dialog defaultOpen={openDialog} open={openDialog}>
-        <DialogContent className="p-8 text-center w-1/5 bg-white">
+        <DialogContent className="p-8 text-center w-3/4 md:w-1/5 bg-white">
           <CircleAlert className="h-24 w-24 mx-auto text-red-500" />
           <h5 className="font-semibold text-xl">Sign-out</h5>
           <p className="text-[#767882] px-5">Anda yakin ingin keluar?</p>
@@ -62,7 +62,7 @@ export default function Nav() {
       <div className="flex items-center justify-between bg-gray-100 px-5 py-1 sticky top-0 z-10 shadow-lg">
         <div className="flex gap-4">
           <Image className="h-12 w-8" src={Logo} alt="PLN Logo" />
-          <div className="hidden md:flex flex-col justify-end">
+          <div className=" md:flex flex-col justify-end">
             <span>PT PLN(Persero)</span>
             <span>Untuk Induk Wilayah Maluku dan Maluku Utara</span>
           </div>
@@ -70,7 +70,7 @@ export default function Nav() {
 
         <div className="flex gap-4">
           {/* Menu Bar */}
-          <div className="flex justify-center items-end py-2">
+          <div className="hidden md:flex justify-center items-end py-2">
             <a
               href="#dashboard"
               className="px-4 cursor-pointer hover:border-b-2 border-blue-500 hover:text-blue-500 hover:scale-105 transition-transform"

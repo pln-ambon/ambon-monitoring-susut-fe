@@ -48,16 +48,16 @@ const GrafikSistem = () => {
   };
 
   return (
-    <div className="absolute top-[315px] right-5 bg-cyan-900 p-6 rounded w-[380px] shadow-md h-auto">
+    <div className="bg-cyan-900 p-6 rounded w-[380px] shadow-md h-auto">
       <p className="text-white font-semibold text-center text-lg mb-4">
         GRAFIK BEBAN SISTEM
       </p>
       <DoughnutChart data={data} options={options} />
       <div className="grid grid-cols-2 gap-2 mt-8">
-        <div className="bg-[#d4afb9] text-sm flex items-center rounded px-2 py-1">
+        <div className=" bg-[#d1cfe2] text-sm flex items-center rounded px-2 py-1">
           PLTD POKA
         </div>
-        <div className="bg-[#d1cfe2] text-sm flex items-center rounded px-2 py-1">
+        <div className="bg-[#d4afb9] text-sm flex items-center rounded px-2 py-1">
           PLTD HATIVE KECIL
         </div>
         <div className="bg-[#9cadce] text-sm flex items-center rounded px-2 py-1">

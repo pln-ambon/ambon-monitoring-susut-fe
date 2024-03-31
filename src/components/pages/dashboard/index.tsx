@@ -23,16 +23,20 @@ export default function Dashboard() {
       <div className="bg-white relative">
         <MapLine />
 
-        <TableInfo />
+        <div className="hidden lg:block lg:absolute lg:top-5 lg:right-5">
+          <TableInfo />
+        </div>
 
-        <GrafikSistem />
+        <div className="hidden lg:block lg:absolute lg:top-[315px] lg:right-5">
+          <GrafikSistem />
+        </div>
+
       </div>
 
       {/* Gambar Sistem */}
-      <div className="grid lg:grid-cols-12 gap-4" id="#sistem">
-        <div className="col-span-12 lg:col-span-3">{/* <TableInfo /> */}</div>
-        <div className="col-span-8 lg:col-span-4">{/* <GrafikSistem /> */}</div>
-      </div>
+        <div className="mx-auto lg:hidden"><TableInfo /></div>
+        <div className="mx-auto lg:hidden"><GrafikSistem /></div>
+      
 
       {/* Gambar Table */}
       <div className="rounded overflow-hidden px-8 mt-8" id="susut">
