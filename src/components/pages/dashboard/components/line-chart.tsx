@@ -36,8 +36,9 @@ export default function LineChart() {
     refetchIntervalInBackground: true,
   });
 
+  const labels = dataTrend?.["PLTMG WAAI"]?.labels
   const data = {
-    labels: dataTrend?.["PLTMG WAAI"]?.labels,
+    labels: labels,
     datasets: [
       {
         label: "PLTD HATIVE",
@@ -116,25 +117,11 @@ export default function LineChart() {
           maxTicksLimit: 24,
         },
       },
-      // yAxes: {
-      //   scaleLabel: {
-      //     display: true,
-      //     labelString: "KW"
-      //   },
-      // }
-      // y1: {
-      //   type: 'linear' as const,
-      //   display: true,
-      //   position: 'right' as const,
-      //   grid: {
-      //     drawOnChartArea: false,
-      //   },
-      // },
     },
   };
 
   return (
-    <div className="bg-gray-100 py-8 rounded-lg mb-8">
+    <div className="bg-gray-100 py-8 px-4 rounded-lg mb-8">
       <Line data={data} options={options} height={80} />
     </div>
   );
