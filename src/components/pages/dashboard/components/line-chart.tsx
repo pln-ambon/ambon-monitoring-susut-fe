@@ -8,6 +8,7 @@ import {
   Tooltip,
   Legend,
   Filler,
+  SubTitle,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 import { useQuery } from "@tanstack/react-query";
@@ -23,6 +24,7 @@ ChartJS.register(
   Tooltip,
   Legend,
   Filler,
+  SubTitle
 );
 
 export default function LineChart() {
@@ -100,21 +102,25 @@ export default function LineChart() {
     plugins: {
       title: {
         display: true,
-        text: "Trend Beban (KW)",
+        text: "Trend Beban 24 Jam Terakhir (KW)",
+      },
+      subtitle: {
+        display: true,
+        text: "Beban  (kw)",
+        position: "left"
       },
     },
     scales: {
-      y: {
-        type: "linear" as const,
-        display: true,
-        position: "left" as const,
+      x: {
+        ticks: {
+          maxTicksLimit: 24,
+        },
       },
-      // xAxes: {
+      // yAxes: {
       //   scaleLabel: {
       //     display: true,
-      //     labelString: "number of cars",
-      //     fontColor: "color you want",
-      //   }
+      //     labelString: "KW"
+      //   },
       // }
       // y1: {
       //   type: 'linear' as const,
@@ -128,7 +134,7 @@ export default function LineChart() {
   };
 
   return (
-    <div className="bg-gray-100 p-8 rounded-lg">
+    <div className="bg-gray-100 py-8 rounded-lg mb-8">
       <Line data={data} options={options} height={80} />
     </div>
   );

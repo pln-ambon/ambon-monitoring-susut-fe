@@ -5,6 +5,7 @@ import Avatar, { ConfigProvider } from "react-avatar";
 import { useRouter } from "@/utils/router";
 import { CircleAlert } from "lucide-react";
 import { LogOut } from "lucide-react";
+import { useCookies } from 'next-client-cookies';
 
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -19,6 +20,8 @@ import Logo from "@/components/icon/pln.png";
 import { logoutRequest } from "@/api/logout";
 
 export default function Nav() {
+  const cookies = useCookies()
+
   const router = useRouter();
   const [openDialog, setOpenDialog] = React.useState<boolean>(false);
 
@@ -30,6 +33,9 @@ export default function Nav() {
     await logoutRequest();
     router.push("/login");
   };
+
+  console.log(cookies.get("full_name"), "<<cookies");
+  
   return (
     <>
       <Dialog defaultOpen={openDialog} open={openDialog}>
