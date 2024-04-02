@@ -556,7 +556,7 @@ export default function MapLine() {
         <foreignObject x="1590" y="300" width="400" height="200">
           <div className="bg-gray-200 p-8 border-4 border-white text-3xl  flex flex-col gap-2 bg-opacity-80">
             <span className="font-semibold">PLTMG AMBON PEAKER</span>
-            <span>DAYA: {roundNumber(data?.["PLTMG WAAI"]?.pTotal)} MW</span>
+            <span>BEBAN: {roundNumber(data?.["PLTMG WAAI"]?.pTotal)} MW</span>
             <span>
               TEGANGAN: {roundNumber(data?.["PLTMG WAAI"]?.vAverage)} KV
             </span>
@@ -568,7 +568,7 @@ export default function MapLine() {
         <foreignObject x="2020" y="590" width="350" height="200">
           <div className="bg-gray-200 p-8 border border-white text-3xl  flex flex-col gap-2 bg-opacity-80">
             <span className="font-semibold">BMPP</span>
-            <span>DAYA: {roundNumber(data?.["BMPP WAAI"]?.pTotal)} MW</span>
+            <span>BEBAN: {roundNumber(data?.["BMPP WAAI"]?.pTotal)} MW</span>
             <span>
               TEGANGAN: {roundNumber(data?.["BMPP WAAI"]?.vAverage)} KV
             </span>
@@ -580,7 +580,7 @@ export default function MapLine() {
         <foreignObject x="1030" y="750" width="300" height="200">
           <div className="bg-gray-200 p-8 border-4 border-white text-3xl  flex flex-col gap-2 bg-opacity-80">
             <span className="font-semibold">PLTD POKA</span>
-            <span>DAYA: {roundNumber(data?.["PLTD POKA"]?.pTotal)} MW</span>
+            <span>BEBAN: {roundNumber(data?.["PLTD POKA"]?.pTotal)} MW</span>
             <span>
               TEGANGAN: {roundNumber(data?.["PLTD POKA"]?.vAverage)} KV
             </span>
@@ -593,7 +593,7 @@ export default function MapLine() {
           <div className="bg-gray-200 p-8 border-4 border-white text-3xl  flex flex-col gap-2 bg-opacity-80">
             <span className="font-semibold">PLTD HATIVE</span>
             <span>
-              DAYA: {roundNumber(data?.["PLTD HATIVE KECIL"]?.pTotal)} MW
+              BEBAN: {roundNumber(data?.["PLTD HATIVE KECIL"]?.pTotal)} MW
             </span>
             <span>
               TEGANGAN: {roundNumber(data?.["PLTD HATIVE KECIL"]?.vAverage)} KV

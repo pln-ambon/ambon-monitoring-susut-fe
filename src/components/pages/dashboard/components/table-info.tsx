@@ -22,16 +22,18 @@ export default function TableInfo() {
         SISTEM AMBON
       </div>
       <div className="flex flex-col justify-between h-full">
-        <div className="grid grid-cols-2 py-2">
-          <span className="">TEGANGAN</span>
+        <div className="grid grid-cols-3 py-2">
+          <span className="col-span-2">ARUS LINE WAAI-PASSO #1</span>
           <span className=" text-amber-400 text-right">
-            {roundNumber(data?.voltage)} KV
+            {/* {roundNumber(data?.voltage)} KV */}
+            - A
           </span>
         </div>
-        <div className="grid grid-cols-2 py-2">
-          <span className="">ARUS</span>
+        <div className="grid grid-cols-3 py-2">
+          <span className="col-span-2">ARUS LINE WAAI-PASSO #2</span>
           <span className=" text-amber-400 text-right">
-            {roundNumber(data?.curent)} A
+            {/* {roundNumber(data?.curent)} A */}
+            - A
           </span>
         </div>
         <div className="grid grid-cols-2 py-2">
@@ -47,15 +49,16 @@ export default function TableInfo() {
           </span>
         </div>
         <div className="grid grid-cols-2 py-2">
-          <span className="">DAYA</span>
+          <span className="">BEBAN SAAT INI</span>
           <span className=" text-amber-400 text-right">
             {roundNumber(data?.daya)} MW
           </span>
         </div>
         <div className="grid grid-cols-2 py-2">
-          <span className="">DMP</span>
+          <span className="">RESERVE MARGIN</span>
           <span className=" text-amber-400 text-right">
-            {roundNumber(data?.dmp)} MW
+            {/* {roundNumber(data?.dmp)} MW */}
+            - %
           </span>
         </div>
         <div className="grid grid-cols-2 py-2 items-center">
