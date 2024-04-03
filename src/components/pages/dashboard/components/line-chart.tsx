@@ -89,6 +89,7 @@ export default function LineChart() {
         yAxisID: "y",
         fill: true,
         tension: 0,
+        hidden: true
       },
     ],
   };

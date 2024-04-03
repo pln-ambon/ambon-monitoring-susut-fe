@@ -17,13 +17,17 @@ const GrafikSistem = () => {
     refetchIntervalInBackground: true,
   });
 
+  console.log(dataGrafik);
+  
+
   const data = {
     labels: dataGrafik?.unitNames || [],
     datasets: [
       {
         //   label: "# of Votes",
         data: dataGrafik?.unitValue || [],
-        backgroundColor: ["#d4afb9", "#d1cfe2", "#9cadce", "#7ec4cf"],
+        // backgroundColor: ["#d4afb9", "#d1cfe2", "#9cadce", "#7ec4cf"],
+        backgroundColor: dataGrafik?.colors,
         borderWidth: 1,
       },
     ],
@@ -33,7 +37,7 @@ const GrafikSistem = () => {
     responsive: true,
     plugins: {
       legend: {
-        display: true,
+        display: false,
         position: "bottom",
         align: "center",
         labels: {
@@ -59,7 +63,7 @@ const GrafikSistem = () => {
         GRAFIK BEBAN SISTEM
       </p>
       <DoughnutChart data={data} options={options} />
-      {/* <div className="grid grid-cols-2 gap-2 mt-8">
+      <div className="grid grid-cols-2 gap-2 mt-8">
         <div className=" bg-[#d1cfe2] text-sm flex items-center rounded px-2 py-1">
           PLTD POKA
         </div>
@@ -72,7 +76,7 @@ const GrafikSistem = () => {
         <div className="bg-[#7ec4cf] text-sm flex items-center rounded px-2 py-1">
           BMPP WAAI
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
