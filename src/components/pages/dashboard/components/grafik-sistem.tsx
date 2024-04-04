@@ -17,7 +17,7 @@ const GrafikSistem = () => {
     refetchIntervalInBackground: true,
   });
 
-  console.log(dataGrafik);
+  // console.log(dataGrafik);
   
 
   const data = {

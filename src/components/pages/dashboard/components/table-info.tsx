@@ -25,15 +25,13 @@ export default function TableInfo() {
         <div className="grid grid-cols-3 py-2">
           <span className="col-span-2">ARUS LINE WAAI-PASSO #1</span>
           <span className=" text-amber-400 text-right">
-            {/* {roundNumber(data?.voltage)} KV */}
-            - A
+            {roundNumber(data?.passo1)} A
           </span>
         </div>
         <div className="grid grid-cols-3 py-2">
           <span className="col-span-2">ARUS LINE WAAI-PASSO #2</span>
           <span className=" text-amber-400 text-right">
-            {/* {roundNumber(data?.curent)} A */}
-            - A
+          {roundNumber(data?.passo2)} A
           </span>
         </div>
         <div className="grid grid-cols-2 py-2">
