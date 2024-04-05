@@ -35,7 +35,7 @@ export default function Nav() {
   };
 
   // console.log(cookies?.get("full_name"), "<<cookies");
-  
+
   return (
     <>
       <Dialog defaultOpen={openDialog} open={openDialog}>

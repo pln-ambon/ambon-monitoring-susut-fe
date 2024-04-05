@@ -19,13 +19,15 @@ export default function Dashboard() {
         <div className="hidden lg:block lg:absolute lg:top-[315px] lg:right-5">
           <GrafikSistem />
         </div>
-
       </div>
 
       {/* Gambar Sistem */}
-        <div className="mx-auto lg:hidden"><TableInfo /></div>
-        <div className="mx-auto lg:hidden"><GrafikSistem /></div>
-      
+      <div className="mx-auto lg:hidden">
+        <TableInfo />
+      </div>
+      <div className="mx-auto lg:hidden">
+        <GrafikSistem />
+      </div>
 
       {/* Gambar Table */}
       <div className="rounded overflow-hidden px-8 mt-8" id="susut">

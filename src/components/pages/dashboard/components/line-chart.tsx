@@ -24,7 +24,7 @@ ChartJS.register(
   Tooltip,
   Legend,
   Filler,
-  SubTitle
+  SubTitle,
 );
 
 export default function LineChart() {
@@ -36,7 +36,7 @@ export default function LineChart() {
     refetchIntervalInBackground: true,
   });
 
-  const labels = dataTrend?.["PLTMG WAAI"]?.labels
+  const labels = dataTrend?.["PLTMG WAAI"]?.labels;
   const data = {
     labels: labels,
     datasets: [
@@ -89,7 +89,7 @@ export default function LineChart() {
         yAxisID: "y",
         fill: true,
         tension: 0,
-        hidden: true
+        hidden: true,
       },
     ],
   };
@@ -109,7 +109,7 @@ export default function LineChart() {
       subtitle: {
         display: true,
         text: "Beban  (kw)",
-        position: "left"
+        position: "left",
       },
     },
     scales: {

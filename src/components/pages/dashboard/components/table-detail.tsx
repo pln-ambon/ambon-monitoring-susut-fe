@@ -216,9 +216,7 @@ export default function TableDetail() {
         <span className="py-2 bg-cyan-900 text-white">
           {roundNumber(data?.grandTotal?.p)}
         </span>
-        <span className="py-2 bg-cyan-900 text-white">
-          -
-        </span>
+        <span className="py-2 bg-cyan-900 text-white">-</span>
       </div>
     </div>
   );

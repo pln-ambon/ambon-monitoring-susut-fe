@@ -18,7 +18,6 @@ const GrafikSistem = () => {
   });
 
   // console.log(dataGrafik);
-  
 
   const data = {
     labels: dataGrafik?.unitNames || [],
@@ -41,9 +40,8 @@ const GrafikSistem = () => {
         position: "bottom",
         align: "center",
         labels: {
-          color: "#FFFFFF"
-        }
-        
+          color: "#FFFFFF",
+        },
       },
       datalabels: {
         formatter: (value, context) => {
