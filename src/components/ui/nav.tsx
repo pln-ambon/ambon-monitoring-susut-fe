@@ -5,7 +5,7 @@ import Avatar, { ConfigProvider } from "react-avatar";
 import { useRouter } from "@/utils/router";
 import { CircleAlert } from "lucide-react";
 import { LogOut } from "lucide-react";
-// import { useCookies } from 'next-client-cookies';
+import Cookies from "js-cookie";
 
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -20,7 +20,7 @@ import Logo from "@/components/icon/pln.png";
 import { logoutRequest } from "@/api/logout";
 
 export default function Nav() {
-  // const cookies = useCookies()
+  const fullName = Cookies.get("simon-user_name");
 
   const router = useRouter();
   const [openDialog, setOpenDialog] = React.useState<boolean>(false);
@@ -33,8 +33,6 @@ export default function Nav() {
     await logoutRequest();
     router.push("/login");
   };
-
-  // console.log(cookies?.get("full_name"), "<<cookies");
 
   return (
     <>
@@ -94,11 +92,11 @@ export default function Nav() {
           <Popover>
             <PopoverTrigger asChild>
               <Card className="divide-y rounded-md border shadow-white cursor-pointer">
-                <CardContent className="flex items-center px-1 py-2">
+                <CardContent className="flex items-center px-4 py-2">
                   <ConfigProvider colors={["#60a5fa", "#60a5fa"]}>
                     <Avatar
                       className=""
-                      name={"Carolus Nurtyandi" || "N N"}
+                      name={fullName || "N N"}
                       size="40"
                       round="30px"
                       textSizeRatio={1.5}
@@ -106,7 +104,7 @@ export default function Nav() {
                     />
                   </ConfigProvider>
 
-                  <p className="px-2 hidden md:flex">Carolus Nurtyandi</p>
+                  <p className="px-2 hidden md:flex">{fullName}</p>
                 </CardContent>
               </Card>
             </PopoverTrigger>

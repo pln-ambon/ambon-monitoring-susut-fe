@@ -26,6 +26,12 @@ export async function loginRequest({ body }): Promise<any> {
       });
     }
 
+    cookies().set({
+      name: "simon-user_name",
+      value: response?.data?.full_name,
+      path: "/",
+    });
+
     return Promise.resolve();
   } catch (error) {
     return Promise.reject(error.response?.data?.message);
