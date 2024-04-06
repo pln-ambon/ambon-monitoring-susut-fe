@@ -1,27 +1,15 @@
+"use client"
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Droplets } from "lucide-react";
 import { ThermometerSnowflake } from "lucide-react";
 
-import { CloudSun } from "lucide-react"; //Clear
-import { CloudRain } from "lucide-react"; // Rain
-import { Cloudy } from "lucide-react"; // Clouds
-import { CloudDrizzle } from "lucide-react"; // Drizzle
-import { CloudLightning } from "lucide-react"; // Thunderstorm
-import { Cloud } from "lucide-react"; // default
+import CloudRender from "./CloudRender"
 
 import { roundNumber } from "@/utils/rounded";
 
 import { getDataMap } from "@/api/data_map";
 import { getWeather } from "@/api/weather";
-
-const icons: any = {
-  Clear: <CloudSun className="h-16 w-16" />,
-  Rain: <CloudRain className="h-16 w-16" />,
-  Clouds: <Cloudy className="h-16 w-16" />,
-  Drizzle: <CloudDrizzle className="h-16 w-16" />,
-  Thunderstorm: <CloudLightning className="h-16 w-16" />,
-};
 
 export default function MapLine() {
   const { data } = useQuery({
@@ -671,9 +659,8 @@ export default function MapLine() {
           <div className="flex flex-col justify-center items-center">
             <div className="text-3xl font-semibold">Sirimau</div>
             <div className="p-4 text-gray-700 rounded-xl text-2xl  flex gap-6 items-center">
-              {icons[weatherSirimau?.weather[0]?.main] || (
-                <Cloud className="h-16 w-16" />
-              )}
+              
+              <CloudRender name={weatherSirimau?.weather[0]?.main} />
               <div className="flex flex-col">
                 <span>Weather</span>
                 <span className="font-semibold">
@@ -708,9 +695,8 @@ export default function MapLine() {
           <div className="flex flex-col justify-center items-center">
             <div className="text-3xl font-semibold">Passo</div>
             <div className="p-4 text-gray-700 rounded-xl text-2xl  flex gap-6 items-center">
-              {icons[weatherSirimau?.weather[0]?.main] || (
-                <Cloud className="h-16 w-16" />
-              )}
+            <CloudRender name={weatherPasso?.weather[0]?.main} />
+
               <div className="flex flex-col">
                 <span>Weather</span>
                 <span className="font-semibold">
@@ -745,9 +731,8 @@ export default function MapLine() {
           <div className="flex flex-col justify-center items-center">
             <div className="text-3xl font-semibold">Hative Besar</div>
             <div className="p-4 text-gray-700 rounded-xl text-2xl  flex gap-6 items-center">
-              {icons[weatherSirimau?.weather[0]?.main] || (
-                <Cloud className="h-16 w-16" />
-              )}
+            <CloudRender name={weatherHativeBesar?.weather[0]?.main} />
+
               <div className="flex flex-col">
                 <span>Weather</span>
                 <span className="font-semibold">
@@ -782,9 +767,8 @@ export default function MapLine() {
           <div className="flex flex-col justify-center items-center">
             <div className="text-3xl font-semibold">Waai</div>
             <div className="p-4 text-gray-700 rounded-xl text-2xl  flex gap-6 items-center">
-              {icons[weatherSirimau?.weather[0]?.main] || (
-                <Cloud className="h-16 w-16" />
-              )}
+            <CloudRender name={weatherWaai?.weather[0]?.main} />
+
               <div className="flex flex-col">
                 <span>Weather</span>
                 <span className="font-semibold">
