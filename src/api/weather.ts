@@ -10,7 +10,7 @@ export async function getWeather({
   long: number;
 }): Promise<any> {
   try {
-    const apiKey = "4ad999ed179aa0f0c4bd4155310a6d18";
+    const apiKey = process.env.WEATHER_API_KEY
     const { data } = await axios({
       method: "GET",
       url: `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`,

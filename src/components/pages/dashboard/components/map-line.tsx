@@ -103,556 +103,556 @@ export default function MapLine() {
         <path
           d="M1639.42 1007.25L1623.6 1030.37"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M2000.48 585.828H1972.14V614.175H2000.48V585.828Z"
           fill="#66FF33"
           stroke="#205867"
-          stroke-width="5.33331"
-          stroke-miterlimit="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5.33331"
+          strokeMiterlimit="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M2003.14 633.068H1974.79V661.415H2003.14V633.068Z"
           fill="#66FF33"
           stroke="#205867"
-          stroke-width="5.33331"
-          stroke-miterlimit="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5.33331"
+          strokeMiterlimit="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M1415.6 1379.52C1423.95 1379.52 1430.72 1372.75 1430.72 1364.41C1430.72 1356.06 1423.95 1349.29 1415.6 1349.29C1407.25 1349.29 1400.49 1356.06 1400.49 1364.41C1400.49 1372.75 1407.25 1379.52 1415.6 1379.52Z"
           fill="#FF0000"
           stroke="#372277"
-          stroke-width="5.33331"
-          stroke-miterlimit="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5.33331"
+          strokeMiterlimit="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M1942.8 631.217L1906.75 663.309"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1906.76 663.304L1910.72 727.555"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M1910.72 727.557L1901.28 788.778"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M1901.27 788.799L1880.48 846.629"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M1880.49 846.602L1838.92 880.619"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M1838.92 880.616L1770.88 888.175"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M1770.89 888.176L1693.38 896.788"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1643.69 890.068L1609.32 888.917"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M1611.22 888.181L1572.29 903.298"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1573.76 902.735L1542.21 927.868"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1544.67 925.92L1513.88 944.868"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1515.9 944.113L1487.41 947.551"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1488.41 947.561H1459.07"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1460.97 947.55L1427 945.332"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1428.85 944.872L1389.77 954.737"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1391.03 954.326L1341.57 970.331"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1343.81 969.433L1287.11 992.112"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1288.59 991.526L1234.19 1020.47"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1236.55 1019.23L1183.17 1048.8"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1184.63 1048.01L1128.35 1079.06"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1129.99 1078.15L1083.96 1108.08"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1083.92 1108.1L1031.97 1133.86"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M1031.99 1133.85L980.963 1152.75"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M980.954 1152.75L957.884 1175.82"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M957.894 1175.82L950.545 1206.5"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1663.84 893.129L1637.44 889.862"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1663.96 902.438L1638.61 916.517"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1639.77 915.877L1618.81 931.601"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1621.09 929.906L1607.22 952.45"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1608.14 950.934L1601.93 975.108"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1601.97 972.286L1609 1007.01"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1644.71 1099.09L1669.58 1146.7"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1668.1 1143.86V1188.01"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1669.4 1184.88L1644.41 1214.65"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1646.07 1212.98L1605.31 1243.09"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1607.43 1241.56L1571.94 1276.48"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1573.7 1274.7L1528.22 1308.47"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1528.23 1308.46L1484.51 1340.47"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1486.42 1339.07L1432.6 1358.73"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1332.46 1060.15L1340.02 1084.72"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1340.01 1082.83V1101.72"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1341.9 1097.94L1321.11 1107.39"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1323.64 1106.24L1290.61 1106.79"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1343.79 1030.87H1315.45V1059.21H1343.79V1030.87Z"
           fill="#FF9900"
           stroke="#205867"
-          stroke-width="5.33331"
-          stroke-miterlimit="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5.33331"
+          strokeMiterlimit="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M1292.76 1106.25L1258.75 1114.96"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1259.83 1114.68L1224.72 1123.67"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1225.92 1123.36L1190.71 1132.37"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1192.3 1131.96L1161.03 1144.14"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1164.37 1142.81L1130.62 1158.8"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1133.07 1157.64L1101.91 1176.93"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1103.8 1175.73L1073.16 1195.09"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1074.87 1194.01L1044.38 1212.73"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1047.19 1211.49L1009.59 1228.09"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1012.23 1226.93L965.681 1224.99"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M950.726 1237.79C959.076 1237.79 965.845 1231.02 965.845 1222.67C965.845 1214.32 959.076 1207.56 950.726 1207.56C942.377 1207.56 935.608 1214.32 935.608 1222.67C935.608 1231.02 942.377 1237.79 950.726 1237.79Z"
           fill="#FF0000"
           stroke="#372277"
-          stroke-width="5.33331"
-          stroke-miterlimit="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5.33331"
+          strokeMiterlimit="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M1469.03 1116.32L1449.61 1135.74"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1490.46 1115.56L1465.86 1117.41"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1507.82 1120.81L1488.48 1115.7"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1529.36 1116.87L1506.25 1120.4"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1562.62 1092.34L1527.29 1117.19"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1595.64 1059.31L1561.43 1093.52"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1624.24 1029.7L1591.53 1063.43"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1622.72 1042.39L1645.84 1101.28"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1608.36 1005.35L1623.45 1044.23"
           stroke="#FF0000"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1457.18 1133.86H1428.83V1162.2H1457.18V1133.86Z"
           fill="#FF9900"
           stroke="#205867"
-          stroke-width="5.33331"
-          stroke-miterlimit="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5.33331"
+          strokeMiterlimit="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M1639.71 977.528L1638.12 1009.14"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1646.7 948.353L1639.42 978.91"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1661.49 925.634L1645.34 950.412"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1677.1 911.83L1660.6 927.019"
           stroke="#FF9900"
-          stroke-width="7.99997"
-          stroke-miterlimit="3"
+          strokeWidth="7.99997"
+          strokeMiterlimit="3"
         />
         <path
           d="M1678.28 912.759C1686.63 912.759 1693.4 905.99 1693.4 897.641C1693.4 889.291 1686.63 882.522 1678.28 882.522C1669.93 882.522 1663.17 889.291 1663.17 897.641C1663.17 905.99 1669.93 912.759 1678.28 912.759Z"
           fill="#FF0000"
           stroke="#372277"
-          stroke-width="5.33331"
-          stroke-miterlimit="3"
+          strokeWidth="5.33331"
+          strokeMiterlimit="3"
         />
         <path
           d="M1952.78 634.96C1961.13 634.96 1967.89 628.191 1967.89 619.842C1967.89 611.492 1961.13 604.724 1952.78 604.724C1944.43 604.724 1937.66 611.492 1937.66 619.842C1937.66 628.191 1944.43 634.96 1952.78 634.96Z"
           fill="#FF0000"
           stroke="#372277"
-          stroke-width="5.33331"
-          stroke-miterlimit="3"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5.33331"
+          strokeMiterlimit="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M1990.19 578.266L2065.38 485.204"
           stroke="white"
-          stroke-width="1.33333"
-          stroke-miterlimit="3"
-          stroke-linecap="square"
-          stroke-dasharray="16 16"
+          strokeWidth="1.33333"
+          strokeMiterlimit="3"
+          strokeLinecap="square"
+          strokeDasharray="16 16"
         />
         <path
           d="M2006.93 646.302L2103.38 695.204"
           stroke="black"
-          stroke-width="1.33333"
-          stroke-miterlimit="3"
-          stroke-linecap="square"
-          stroke-dasharray="16 16"
+          strokeWidth="1.33333"
+          strokeMiterlimit="3"
+          strokeLinecap="square"
+          strokeDasharray="16 16"
         />
         <path
           d="M1935.12 604.715L1820.38 540.204"
           stroke="white"
-          stroke-width="1.33333"
-          stroke-miterlimit="3"
-          stroke-linecap="square"
-          stroke-dasharray="16 16"
+          strokeWidth="1.33333"
+          strokeMiterlimit="3"
+          strokeLinecap="square"
+          strokeDasharray="16 16"
         />
         <path
           d="M1666.78 880.639L1572.38 822.205"
           stroke="white"
-          stroke-width="1.33333"
-          stroke-miterlimit="3"
-          stroke-linecap="square"
-          stroke-dasharray="16 16"
+          strokeWidth="1.33333"
+          strokeMiterlimit="3"
+          strokeLinecap="square"
+          strokeDasharray="16 16"
         />
         <path
           d="M1315.46 1030.87L1209.38 981.204"
           stroke="white"
-          stroke-width="1.33333"
-          stroke-miterlimit="3"
-          stroke-linecap="square"
-          stroke-dasharray="16 16"
+          strokeWidth="1.33333"
+          strokeMiterlimit="3"
+          strokeLinecap="square"
+          strokeDasharray="16 16"
         />
         <path
           d="M1462.67 1156.53L1639.38 1243.2"
           stroke="white"
-          stroke-width="1.33333"
-          stroke-miterlimit="3"
-          stroke-linecap="square"
-          stroke-dasharray="16 16"
+          strokeWidth="1.33333"
+          strokeMiterlimit="3"
+          strokeLinecap="square"
+          strokeDasharray="16 16"
         />
         <path
           d="M1437.38 1364.2L1507.38 1394.2"
           stroke="white"
-          stroke-width="1.33333"
-          stroke-miterlimit="3"
-          stroke-linecap="square"
-          stroke-dasharray="16 16"
+          strokeWidth="1.33333"
+          strokeMiterlimit="3"
+          strokeLinecap="square"
+          strokeDasharray="16 16"
         />
         <path
           d="M929.768 1209.44L822.376 1167.2"
           stroke="white"
-          stroke-width="1.33333"
-          stroke-miterlimit="3"
-          stroke-linecap="square"
-          stroke-dasharray="16 16"
+          strokeWidth="1.33333"
+          strokeMiterlimit="3"
+          strokeLinecap="square"
+          strokeDasharray="16 16"
         />
         {/* weather */}
         <foreignObject x="30" y="160" width="250" height="500">

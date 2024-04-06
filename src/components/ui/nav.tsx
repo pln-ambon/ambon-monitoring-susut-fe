@@ -19,6 +19,14 @@ import Logo from "@/components/icon/pln.png";
 
 import { logoutRequest } from "@/api/logout";
 
+const subStringName = (text) => {
+  let displayText = text;
+  if (text.length > 20) {
+      displayText = text.substring(0, 20) + "...";
+  }
+  return displayText
+}
+
 export default function Nav() {
   const fullName = Cookies.get("simon-user_name");
 
