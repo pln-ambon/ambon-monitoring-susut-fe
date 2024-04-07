@@ -6,6 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import { roundNumber } from "@/utils/rounded";
 
 import { getTotalTable } from "@/api/table_total";
+import { getTableDetail } from "@/api/table_detail";
 
 export default function TableInfo() {
   const { data } = useQuery({
@@ -16,8 +17,16 @@ export default function TableInfo() {
     refetchIntervalInBackground: true,
   });
 
-  // console.log(data);
-  
+  const { data: dataDetail } = useQuery({
+    queryKey: ["/table_detail"],
+    queryFn: () => getTableDetail(),
+    staleTime: 1000,
+    refetchInterval: 60000, // 1 menit
+    refetchIntervalInBackground: true,
+  });
+
+
+  const reserveMargin = (dataDetail?.grandTotal?.p_dmp_pasok - dataDetail?.grandTotal?.p) / dataDetail?.grandTotal?.p  
 
   return (
     <div className=" bg-cyan-900 text-white rounded pb-2 px-5 w-[380px]">
@@ -58,7 +67,7 @@ export default function TableInfo() {
         <div className="grid grid-cols-2 py-2">
           <span className="">RESERVE MARGIN</span>
           <span className=" text-amber-400 text-right">
-            {roundNumber((data?.dmp / data?.daya) * 100)} %
+            {roundNumber(reserveMargin * 100)} %
           </span>
         </div>
         <div className="grid grid-cols-2 py-2 items-center">
