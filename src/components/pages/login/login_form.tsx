@@ -58,7 +58,7 @@ function LoginForm() {
         modalType: "ERROR",
         isError: true,
         title: "Login Error",
-        message: error.message,
+        message: error?.message,
       });
     } finally {
       setLoading(false);

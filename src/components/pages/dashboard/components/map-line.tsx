@@ -72,6 +72,9 @@ export default function MapLine() {
     refetchIntervalInBackground: true,
   });
 
+  // console.log(data);
+  
+
   return (
     <foreignObject width="100%">
       <svg
@@ -842,47 +845,40 @@ export default function MapLine() {
         <foreignObject x="1520" y="1400" width="400" height="200">
           <div className="bg-indigo-100 p-4 border-4 border-white text-3xl  flex flex-col gap-2 bg-opacity-80">
             <span className="font-semibold">GI SIRIMAU</span>
-            {/* <span>BEBAN: {roundNumber(data?.["GI SIRIMAU"]?.pTotal)} MW</span>
+            <span>BEBAN: {roundNumber(data?.["GI SIRIMAU"]?.pTotal)} MW</span>
             <span>
               TEGANGAN: {roundNumber(data?.["GI SIRIMAU"]?.vAverage)} KV
-            </span> */}
-            <span>BEBAN: - MW</span>
-            <span>TEGANGAN: - KV</span>
+            </span>
           </div>
         </foreignObject>
         <foreignObject x="460" y="1010" width="350" height="200">
           <div className="bg-indigo-100 p-4 border-4 border-white text-3xl  flex flex-col gap-2 bg-opacity-80">
             <span className="font-semibold">GI HATIVE BESAR</span>
-            {/* <span>
+            <span>
               BEBAN: {roundNumber(data?.["GI HATIVE BESAR"]?.pTotal)} MW
             </span>
             <span>
               TEGANGAN: {roundNumber(data?.["GI HATIVE BESAR"]?.vAverage)} KV
-            </span> */}
-            <span>BEBAN: - MW</span>
-            <span>TEGANGAN: - KV</span>
+            </span>
           </div>
         </foreignObject>
         <foreignObject x="1210" y="660" width="350" height="200">
           <div className="bg-indigo-100 p-4 border-4 border-white text-3xl  flex flex-col gap-2 bg-opacity-80">
             <span className="font-semibold">GI PASSO & GIS PASSO</span>
-            {/* <span>
+            <span>
               BEBAN:{" "}
               {roundNumber(
-                data?.["GI PASSO"]?.pTotal + data?.["GIS PASSO"]?.pTotal,
-              )}{" "}
+                data?.["GIS PASSO"]?.pTotal,
+              )}
               MW
             </span>
             <span>
               TEGANGAN:{" "}
               {roundNumber(
-                (data?.["GI PASSO"]?.vAverage + data?.["GIS PASSO"]?.vAverage) /
-                  2,
-              )}{" "}
+                data?.["GIS PASSO"]?.vAverage) 
+              }
               KV
-            </span> */}
-            <span>BEBAN: - MW</span>
-            <span>TEGANGAN: - KV</span>
+            </span>
           </div>
         </foreignObject>
         <defs>

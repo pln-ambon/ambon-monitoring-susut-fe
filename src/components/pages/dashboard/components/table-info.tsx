@@ -16,6 +16,9 @@ export default function TableInfo() {
     refetchIntervalInBackground: true,
   });
 
+  // console.log(data);
+  
+
   return (
     <div className=" bg-cyan-900 text-white rounded pb-2 px-5 w-[380px]">
       <div className="text-center font-semibold text-xl p-4 text-white">
@@ -55,7 +58,7 @@ export default function TableInfo() {
         <div className="grid grid-cols-2 py-2">
           <span className="">RESERVE MARGIN</span>
           <span className=" text-amber-400 text-right">
-            {/* {roundNumber(data?.dmp)} MW */}- %
+            {roundNumber((data?.dmp / data?.daya) * 100)} %
           </span>
         </div>
         <div className="grid grid-cols-2 py-2 items-center">

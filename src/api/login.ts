@@ -34,6 +34,6 @@ export async function loginRequest({ body }): Promise<any> {
 
     return Promise.resolve();
   } catch (error) {
-    return Promise.reject(error.response?.data?.message);
+    return Promise.reject(error?.response?.data?.message);
   }
 }
