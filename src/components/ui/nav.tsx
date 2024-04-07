@@ -84,13 +84,13 @@ export default function Nav() {
               Dashboard
             </a>
             <a
-              href="#sistem"
+              href="#dashboard"
               className="px-4 cursor-pointer hover:border-b-2 border-blue-500 hover:text-blue-500 hover:scale-105 transition-transform"
             >
               Monitoring Sistem
             </a>
             <a
-              href="#susut"
+              href="#dashboard"
               className="px-4 cursor-pointer hover:border-b-2 border-blue-500 hover:text-blue-500 hover:scale-105 transition-transform"
             >
               Monitoring Susut
