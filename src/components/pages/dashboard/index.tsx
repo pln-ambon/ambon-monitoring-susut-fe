@@ -16,7 +16,7 @@ export default function Dashboard() {
           <TableInfo />
         </div>
 
-        <div className="hidden lg:block lg:absolute lg:top-[315px] lg:right-5">
+        <div className="hidden lg:block lg:absolute lg:top-[285px] lg:right-5">
           <GrafikSistem />
         </div>
       </div>
