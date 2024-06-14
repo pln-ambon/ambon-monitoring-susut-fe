@@ -12,7 +12,6 @@ export async function getDataMap(): Promise<any> {
 
     return data || {};
   } catch (error) {
-    // console.log(error, "<< error table total");
     return {};
   }
 }

@@ -55,7 +55,7 @@ export default function TableDetail() {
           </AccordionTrigger>
           <AccordionContent>
             <div className="grid grid-cols-6 mt-1 text-center bg-gray-50">
-              {data?.["BMPP WAAI"]?.detail?.map((obj, idx) => {
+              {data?.["BMPP WAAI"]?.detail?.map((obj: any, idx: number) => {
                 return (
                   <Fragment key={idx}>
                     <span className="py-2 col-span-2 text-left px-8 border-b">
@@ -97,7 +97,7 @@ export default function TableDetail() {
           </AccordionTrigger>
           <AccordionContent>
             <div className="grid grid-cols-6 mt-1 text-center  bg-gray-50">
-              {data?.["PLTMG WAAI"]?.detail?.map((obj, idx) => {
+              {data?.["PLTMG WAAI"]?.detail?.map((obj: any, idx: number) => {
                 return (
                   <Fragment key={idx}>
                     <span className="py-2 col-span-2 text-left px-8 border-b">
@@ -140,7 +140,7 @@ export default function TableDetail() {
           </AccordionTrigger>
           <AccordionContent>
             <div className="grid grid-cols-6 mt-1 text-center  bg-gray-50">
-              {data?.["PLTD POKA"]?.detail?.map((obj, idx) => {
+              {data?.["PLTD POKA"]?.detail?.map((obj: any, idx: number) => {
                 return (
                   <Fragment key={idx}>
                     <span className="py-2 col-span-2 text-left px-8 border-b">
@@ -183,7 +183,7 @@ export default function TableDetail() {
           </AccordionTrigger>
           <AccordionContent>
             <div className="grid grid-cols-6 mt-1 text-center  bg-gray-50">
-              {data?.["PLTD HATIVE KECIL"]?.detail?.map((obj, idx) => {
+              {data?.["PLTD HATIVE KECIL"]?.detail?.map((obj: any, idx: number) => {
                 return (
                   <Fragment key={idx}>
                     <span className="py-2 col-span-2 text-left px-8 border-b">

@@ -8,7 +8,7 @@ interface LoginRequestProps {
   password: string;
 }
 
-export async function loginRequest({ body }): Promise<any> {
+export async function loginRequest({ body }: any): Promise<any> {
   try {
     const response = await axios({
       method: "POST",
@@ -33,7 +33,7 @@ export async function loginRequest({ body }): Promise<any> {
     });
 
     return Promise.resolve();
-  } catch (error) {
+  } catch (error: any) {
     return Promise.reject(error?.response?.data?.message);
   }
 }

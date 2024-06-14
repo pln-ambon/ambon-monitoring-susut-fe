@@ -1,10 +1,7 @@
 "use client";
 
 import DoughnutChart from "@/components/ui/chart/doughnut-chart";
-import { ChartData, ChartOptions } from "chart.js";
 import { useQuery } from "@tanstack/react-query";
-
-import { roundNumber } from "@/utils/rounded";
 
 import { getDataGrafikBeban } from "@/api/grafik_beban";
 
@@ -32,7 +29,7 @@ const GrafikSistem = () => {
     ],
   };
 
-  const options: ChartOptions<"doughnut"> = {
+  const options: any = {
     responsive: true,
     plugins: {
       legend: {
@@ -44,7 +41,7 @@ const GrafikSistem = () => {
         },
       },
       datalabels: {
-        formatter: (value, context) => {
+        formatter: (value: any, context: any) => {
           const dataIndex = context.dataIndex;
           return context.chart.data.labels[dataIndex];
         },

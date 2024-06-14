@@ -23,10 +23,7 @@ instance.interceptors.request.use(
 // this function will be invoke if response code = 401
 const refreshAuthLogic = async () => {
   try {
-    // create req API refresh token
-    // await instance.post("/refresh-token", {
-    //   refreshToken: "your_refresh_token",
-    // });
+    // TODO: create req API refresh token
 
     return Promise.resolve();
   } catch (error) {

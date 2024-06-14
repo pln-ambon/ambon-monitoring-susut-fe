@@ -6,7 +6,7 @@ import { CloudDrizzle } from "lucide-react"; // Drizzle
 import { CloudLightning } from "lucide-react"; // Thunderstorm
 import { Cloud } from "lucide-react"; // default
 
-export default function CloudRender({ name }) {
+export default function CloudRender({ name }: { name: string }) {
   return (
     <>
       {name === "Clear" && <CloudSun className="h-16 w-16" />}

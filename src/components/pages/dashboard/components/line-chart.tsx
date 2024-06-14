@@ -94,7 +94,7 @@ export default function LineChart() {
     ],
   };
 
-  const options = {
+  const options: any = {
     responsive: true,
     interaction: {
       mode: "index" as const,
