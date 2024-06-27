@@ -1,6 +1,6 @@
 import React from "react";
 
-type ModalType = "SAVE" | "DELETE" | "";
+type ModalType = "SAVE" | "DELETE" | "ERROR" | "";
 
 interface AppState {
   modalType: ModalType;
@@ -37,7 +37,10 @@ const initialState: AppState = {
 
 const AppPageContext = React.createContext(initialState);
 
-const AppDispatchContext = React.createContext(() => {});
+
+const AppDispatchContext = React.createContext<React.Dispatch<Action | any>>(
+  () => {},
+);
 
 function AppPageProvider({ children }: { children: any }) {
   const [state, dispatch] = React.useReducer(reducer, initialState);

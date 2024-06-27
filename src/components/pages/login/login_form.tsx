@@ -52,7 +52,7 @@ function LoginForm() {
         body: values,
       });
       router.push("/");
-    } catch (error) {
+    } catch (error: any) {
       dispatch({
         type: "SET",
         modalType: "ERROR",

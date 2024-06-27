@@ -19,14 +19,6 @@ import Logo from "@/components/icon/pln.png";
 
 import { logoutRequest } from "@/api/logout";
 
-const subStringName = (text) => {
-  let displayText = text;
-  if (text.length > 20) {
-    displayText = text.substring(0, 20) + "...";
-  }
-  return displayText;
-};
-
 export default function Nav() {
   const fullName = Cookies.get("simon-user_name");
 
@@ -101,6 +93,7 @@ export default function Nav() {
             <PopoverTrigger asChild>
               <Card className="divide-y rounded-md border shadow-white cursor-pointer">
                 <CardContent className="flex items-center px-4 py-2">
+                {/* @ts-ignore: TypeScript will ignore the next line */}
                   <ConfigProvider colors={["#60a5fa", "#60a5fa"]}>
                     <Avatar
                       className=""
