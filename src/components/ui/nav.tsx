@@ -62,7 +62,7 @@ export default function Nav() {
           <Image className="h-12 w-8" src={Logo} alt="PLN Logo" />
           <div className=" md:flex flex-col justify-end">
             <span>PT PLN(Persero)</span>
-            <span>Untuk Induk Wilayah Maluku dan Maluku Utara</span>
+            <span>Unit Induk Wilayah Maluku dan Maluku Utara</span>
           </div>
         </div>
 
