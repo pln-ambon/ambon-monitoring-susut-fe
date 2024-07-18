@@ -33,9 +33,8 @@ export default function MapLine() {
     refetchIntervalInBackground: true,
   });
 
-  console.log(weatherPasso, "<< weather passo");
   
-
+  
   // passo
   const { data: weatherPasso } = useQuery({
     queryKey: ["/weather_passo"],
@@ -44,11 +43,12 @@ export default function MapLine() {
         lat: -3.615495,
         long: 128.262228,
       }),
-    staleTime: 1000,
-    refetchInterval: 60000 * 15, // 15 menit
-    refetchIntervalInBackground: true,
-  });
-
+      staleTime: 1000,
+      refetchInterval: 60000 * 15, // 15 menit
+      refetchIntervalInBackground: true,
+    });
+    console.log(weatherPasso, "<< weather passo");
+    
   // hative besar
   const { data: weatherHativeBesar } = useQuery({
     queryKey: ["/weather_hative_besar"],
