@@ -47,7 +47,7 @@ export default function MapLine() {
       refetchInterval: 60000 * 15, // 15 menit
       refetchIntervalInBackground: true,
     });
-    console.log(weatherPasso, "<< weather passo");
+    // console.log(weatherPasso, "<< weather passo");
     
   // hative besar
   const { data: weatherHativeBesar } = useQuery({
@@ -981,7 +981,7 @@ export default function MapLine() {
         />
          {/* weather */}
          {
-          weatherSirimau?.weather[0] && (
+          weatherSirimau && (
             <foreignObject x="30" y="160" width="250" height="500">
               <div className="flex flex-col justify-center items-center">
                 <div className="text-3xl font-semibold">Sirimau</div>
@@ -1020,7 +1020,7 @@ export default function MapLine() {
          }
 
          {
-          weatherPasso?.weather[0] && (
+          weatherPasso && (
             <foreignObject x="250" y="160" width="250" height="500">
               <div className="flex flex-col justify-center items-center">
                 <div className="text-3xl font-semibold">Passo</div>
@@ -1060,7 +1060,7 @@ export default function MapLine() {
          }
 
          {
-          weatherHativeBesar?.weather[0] && (
+          weatherHativeBesar && (
             <foreignObject x="500" y="160" width="250" height="500">
               <div className="flex flex-col justify-center items-center">
                 <div className="text-3xl font-semibold">Hative Besar</div>
@@ -1100,7 +1100,7 @@ export default function MapLine() {
          }
 
          {
-          weatherWaai?.weather[0]?.main && (
+          weatherWaai && (
             <foreignObject x="750" y="160" width="250" height="500">
               <div className="flex flex-col justify-center items-center">
                 <div className="text-3xl font-semibold">Waai</div>
