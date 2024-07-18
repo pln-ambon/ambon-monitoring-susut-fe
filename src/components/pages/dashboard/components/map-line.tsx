@@ -33,6 +33,9 @@ export default function MapLine() {
     refetchIntervalInBackground: true,
   });
 
+  console.log(weatherPasso, "<< weather passo");
+  
+
   // passo
   const { data: weatherPasso } = useQuery({
     queryKey: ["/weather_passo"],
