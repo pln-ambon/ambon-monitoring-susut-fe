@@ -16,8 +16,8 @@ export async function getWeather({
       url: `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`,
     });
 
-    return data || {};
+    return data || undefined;
   } catch (error) {
-    return {};
+    return undefined;
   }
 }
