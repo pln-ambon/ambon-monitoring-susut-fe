@@ -14,8 +14,6 @@ const GrafikSistem = () => {
     refetchIntervalInBackground: true,
   });
 
-  // console.log(dataGrafik);
-
   const data = {
     labels: dataGrafik?.unitNames || [],
     datasets: [

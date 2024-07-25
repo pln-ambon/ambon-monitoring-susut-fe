@@ -1,13 +1,14 @@
-"use server";
+"use client";
 
-import axios from "@/config/axios";
+import axios from "@/config/axios-client";
 
 export async function getTableDetail() {
   try {
+    // return {};
+
     const { data } = await axios({
       method: "GET",
-      url: "/scada/detail-table",
-      withCredentials: true,
+      url: "/table_summary",
     });
 
     return data || {};

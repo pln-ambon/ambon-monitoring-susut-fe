@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import TableInfo from "./components/table-info";
 import TableDetail from "./components/table-detail";

@@ -37,3 +37,13 @@ export async function loginRequest({ body }: any): Promise<any> {
     return Promise.reject(error?.response?.data?.message);
   }
 }
+
+export async function logoutRequest(): Promise<any> {
+  try {
+    cookies().delete("token");
+    return Promise.resolve();
+  } catch (error) {
+    return Promise.reject(error);
+  }
+}
+

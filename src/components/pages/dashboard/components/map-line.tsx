@@ -33,10 +33,6 @@ export default function MapLine() {
     refetchIntervalInBackground: true,
   });
 
-  console.log(weatherSirimau, "<< weather sirimau");
-  
-  
-  
   // passo
   const { data: weatherPasso } = useQuery({
     queryKey: ["/weather_passo"],

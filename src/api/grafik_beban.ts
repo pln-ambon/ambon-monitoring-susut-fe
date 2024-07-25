@@ -1,13 +1,14 @@
-"use server";
+"use cleint";
 
-import axios from "@/config/axios";
+import axios from "@/config/axios-client";
 
 export async function getDataGrafikBeban(): Promise<any> {
   try {
+    // return {};
+
     const { data } = await axios({
       method: "GET",
-      url: "/scada/grafik-beban",
-      withCredentials: true,
+      url: "/grafik_beban",
     });
 
     return data || {};

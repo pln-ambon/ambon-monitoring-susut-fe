@@ -1,13 +1,13 @@
-"use server";
+"use client";
 
-import axios from "@/config/axios";
+import axios from "@/config/axios-client";
 
 export async function getDataMap(): Promise<any> {
   try {
+
     const { data } = await axios({
       method: "GET",
-      url: "/scada/data-map",
-      withCredentials: true,
+      url: "/map",
     });
 
     return data || {};

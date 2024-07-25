@@ -1,13 +1,12 @@
-"use server";
+"use client";
 
-import axios from "@/config/axios";
+import axios from "@/config/axios-client";
 
 export async function getDataTrend(): Promise<any> {
   try {
     const { data } = await axios({
       method: "GET",
-      url: "/scada/24-hour",
-      withCredentials: true,
+      url: "/trend",
     });
 
     return data || {};
