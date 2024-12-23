@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/popover";
 import Logo from "@/components/icon/pln.png";
 
-import { logoutRequest } from "@/api/auth";
+import { logoutRequest } from "@/api/logout";
 
 export default function Nav() {
   const fullName = Cookies.get("simon-user_name");

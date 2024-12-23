@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'nextjs-app-6002',
+      name: 'ambon-susut-fe-6002',
       script: 'node_modules/next/dist/bin/next',
       args: 'start -p 6002',
       instances: 'max',
