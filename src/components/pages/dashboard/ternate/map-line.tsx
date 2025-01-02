@@ -20,20 +20,20 @@ export default function MapLine() {
     refetchIntervalInBackground: true,
   });
 
-  // sirimau
+  // kastela
   const { data: weatherKastela } = useQuery({
     queryKey: ["/weather_kastela"],
     queryFn: () =>
       getWeather({
         lat: 0.7678,
-        long: 27.3106,
+        long: 127.3106,
       }),
     staleTime: 1000,
     refetchInterval: 60000 * 15, // 15 menit
     refetchIntervalInBackground: true,
   });
 
-  // passo
+  // kayu merah
   const { data: weatherKayuMerah } = useQuery({
     queryKey: ["/weather_kayu_merah"],
     queryFn: () =>
@@ -47,7 +47,7 @@ export default function MapLine() {
   });
   // console.log(weatherPasso, "<< weather passo");
 
-  // hative besar
+  // tahua
   const { data: weatherTidoreTahua } = useQuery({
     queryKey: ["/weather_tidore_tahua"],
     queryFn: () =>
@@ -197,7 +197,7 @@ export default function MapLine() {
           </foreignObject>
         )}
 
-        <foreignObject x="750" y="470" width="90" height="200">
+        <foreignObject x="790" y="470" width="90" height="200">
           <div className="bg-green-200 px-4 border-4 font-semibold border-white flex flex-col gap-2 bg-opacity-80 rounded-xl">
             <span className="font-semibold">LINE 1</span>
             <span>{roundNumber(data?.["GI KASTELA"]?.current1)} A</span>
