@@ -5,14 +5,12 @@ import { cookies } from "next/headers";
 
 export async function POST(request: NextRequest) {
   try {
-    
-    const body = await request.json()
-    
+    const body = await request.json();
 
     const response = await axios({
       method: "POST",
       url: "/auth/login",
-      data: body
+      data: body,
     });
 
     // Set cookies from response headers
@@ -31,7 +29,7 @@ export async function POST(request: NextRequest) {
       path: "/",
     });
 
-    return NextResponse.json(response.data)
+    return NextResponse.json(response.data);
   } catch (error: any) {
     return NextResponse.json(
       { message: error?.message },

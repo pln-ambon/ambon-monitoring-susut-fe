@@ -25,7 +25,7 @@ instance.interceptors.response.use(
   },
   async function (error) {
     // console.log( "<< error axios");
-    
+
     return Promise.reject(error);
   },
 );

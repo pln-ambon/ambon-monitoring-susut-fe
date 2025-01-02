@@ -1,13 +1,5 @@
-import Nav from "@/components/ui/nav";
-import Dashboard from "@/components/pages/dashboard";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <>
-      <Nav />
-      <main className="min-h-screen">
-        <Dashboard />
-      </main>
-    </>
-  );
+export default function App() {
+  redirect("/ambon");
 }

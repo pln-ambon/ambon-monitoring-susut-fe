@@ -37,7 +37,6 @@ const initialState: AppState = {
 
 const AppPageContext = React.createContext(initialState);
 
-
 const AppDispatchContext = React.createContext<React.Dispatch<Action | any>>(
   () => {},
 );

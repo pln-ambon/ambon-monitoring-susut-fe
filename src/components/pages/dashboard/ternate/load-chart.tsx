@@ -3,12 +3,12 @@
 import DoughnutChart from "@/components/ui/chart/doughnut-chart";
 import { useQuery } from "@tanstack/react-query";
 
-import { getDataGrafikBeban } from "@/api/grafik_beban";
+import { getDataGrafikBebanTernate } from "@/api/grafik_beban";
 
-const GrafikSistem = () => {
+const LoadChart = () => {
   const { data: dataGrafik } = useQuery({
-    queryKey: ["/grafik_beban"],
-    queryFn: () => getDataGrafikBeban(),
+    queryKey: ["/grafik_beban_ternate"],
+    queryFn: () => getDataGrafikBebanTernate(),
     staleTime: 1000,
     refetchInterval: 60000, // 1 menit
     refetchIntervalInBackground: true,
@@ -18,9 +18,7 @@ const GrafikSistem = () => {
     labels: dataGrafik?.unitNames || [],
     datasets: [
       {
-        //   label: "# of Votes",
         data: dataGrafik?.unitValue || [],
-        // backgroundColor: ["#d4afb9", "#d1cfe2", "#9cadce", "#7ec4cf"],
         backgroundColor: dataGrafik?.colors,
         borderWidth: 1,
       },
@@ -58,20 +56,20 @@ const GrafikSistem = () => {
       <DoughnutChart data={data} options={options} />
       <div className="grid grid-cols-2 gap-2 mt-8">
         <div className=" bg-[#d1cfe2] text-sm flex items-center rounded px-2 py-1">
-          PLTD POKA
+          PLTD KASTELA
         </div>
         <div className="bg-[#d4afb9] text-sm flex items-center rounded px-2 py-1">
-          PLTD HATIVE KECIL
+          PLTMG KASTELA
         </div>
         <div className="bg-[#9cadce] text-sm flex items-center rounded px-2 py-1">
-          PLTMG WAAI
+          PLTD KAYU MERAH
         </div>
         <div className="bg-[#7ec4cf] text-sm flex items-center rounded px-2 py-1">
-          BMPP WAAI
+          PLTU TIDORE
         </div>
       </div>
     </div>
   );
 };
 
-export default GrafikSistem;
+export default LoadChart;

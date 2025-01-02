@@ -2,7 +2,6 @@
 
 import axios from "@/config/axios-client";
 
-
 interface LoginRequestProps {
   email: string;
   password: string;

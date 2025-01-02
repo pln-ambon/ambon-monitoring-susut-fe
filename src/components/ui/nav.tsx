@@ -6,6 +6,7 @@ import { useRouter } from "@/utils/router";
 import { CircleAlert } from "lucide-react";
 import { LogOut } from "lucide-react";
 import Cookies from "js-cookie";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -69,31 +70,26 @@ export default function Nav() {
         <div className="flex gap-4">
           {/* Menu Bar */}
           <div className="hidden md:flex justify-center items-end py-2">
-            <a
-              href="#dashboard"
+            <Link
+              href={"/ambon"}
               className="px-4 cursor-pointer hover:border-b-2 border-blue-500 hover:text-blue-500 hover:scale-105 transition-transform"
             >
-              Dashboard
-            </a>
-            <a
-              href="#dashboard"
+              Sistem Ambon
+            </Link>
+
+            <Link
+              href={"/ternate"}
               className="px-4 cursor-pointer hover:border-b-2 border-blue-500 hover:text-blue-500 hover:scale-105 transition-transform"
             >
-              Monitoring Sistem
-            </a>
-            <a
-              href="#dashboard"
-              className="px-4 cursor-pointer hover:border-b-2 border-blue-500 hover:text-blue-500 hover:scale-105 transition-transform"
-            >
-              Monitoring Susut
-            </a>
+              Sistem Ternate
+            </Link>
           </div>
 
           <Popover>
             <PopoverTrigger asChild>
               <Card className="divide-y rounded-md border shadow-white cursor-pointer">
                 <CardContent className="flex items-center px-4 py-2">
-                {/* @ts-ignore: TypeScript will ignore the next line */}
+                  {/* @ts-ignore: TypeScript will ignore the next line */}
                   <ConfigProvider colors={["#60a5fa", "#60a5fa"]}>
                     <Avatar
                       className=""

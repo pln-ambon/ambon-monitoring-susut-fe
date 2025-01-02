@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Droplets } from "lucide-react";
 import { ThermometerSnowflake } from "lucide-react";
 
-import CloudRender from "./CloudRender";
+import WeatherInfo from "./weather-info";
 
 import { roundNumber } from "@/utils/rounded";
 
@@ -41,12 +41,12 @@ export default function MapLine() {
         lat: -3.615495,
         long: 128.262228,
       }),
-      staleTime: 1000,
-      refetchInterval: 60000 * 15, // 15 menit
-      refetchIntervalInBackground: true,
-    });
-    // console.log(weatherPasso, "<< weather passo");
-    
+    staleTime: 1000,
+    refetchInterval: 60000 * 15, // 15 menit
+    refetchIntervalInBackground: true,
+  });
+  // console.log(weatherPasso, "<< weather passo");
+
   // hative besar
   const { data: weatherHativeBesar } = useQuery({
     queryKey: ["/weather_hative_besar"],
@@ -977,165 +977,158 @@ export default function MapLine() {
           height="1021.2"
           fill="url(#pattern2_27_3)"
         />
-         {/* weather */}
-         {
-          weatherSirimau && (
-            <foreignObject x="30" y="160" width="250" height="500">
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-3xl font-semibold">Sirimau</div>
-                <div className="p-4 text-gray-700 rounded-xl text-2xl  flex gap-6 items-center">
-                  <CloudRender name={weatherSirimau?.weather[0]?.main} />
-                  <div className="flex flex-col">
-                    <span>Weather</span>
-                    <span className="font-semibold">
-                      {weatherSirimau?.weather[0]?.main}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-4 text-2xl  flex gap-6 bg-opacity-80 items-center">
-                  <Droplets className="h-16 w-16" />
-                  <div className="flex flex-col">
-                    <span>Humidity</span>
-                    <span className="font-semibold">
-                      {weatherSirimau?.main?.humidity}%
-                    </span>
-                  </div>
-                </div>
-
-                <div className=" p-4 rounded-xl text-2xl  flex gap-6 bg-opacity-80 items-center">
-                  <ThermometerSnowflake className="h-16 w-16" />
-                  <div className="flex flex-col">
-                    <span>Temp.</span>
-                    <span className="font-semibold">
-                      {roundNumber(weatherSirimau?.main?.temp - 273.15)}&deg; C{" "}
-                    </span>
-                  </div>
+        {/* weather */}
+        {weatherSirimau && (
+          <foreignObject x="30" y="160" width="250" height="500">
+            <div className="flex flex-col justify-center items-center">
+              <div className="text-3xl font-semibold">Sirimau</div>
+              <div className="p-4 text-gray-700 rounded-xl text-2xl  flex gap-6 items-center">
+                <WeatherInfo name={weatherSirimau?.weather[0]?.main} />
+                <div className="flex flex-col">
+                  <span>Weather</span>
+                  <span className="font-semibold">
+                    {weatherSirimau?.weather[0]?.main}
+                  </span>
                 </div>
               </div>
-            </foreignObject>
-          )
-         }
 
-         {
-          weatherPasso && (
-            <foreignObject x="250" y="160" width="250" height="500">
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-3xl font-semibold">Passo</div>
-                <div className="p-4 text-gray-700 rounded-xl text-2xl  flex gap-6 items-center">
-                  <CloudRender name={weatherPasso?.weather[0]?.main} />
-
-                  <div className="flex flex-col">
-                    <span>Weather</span>
-                    <span className="font-semibold">
-                      {weatherPasso?.weather[0]?.main}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-4 text-2xl  flex gap-6 bg-opacity-80 items-center">
-                  <Droplets className="h-16 w-16" />
-                  <div className="flex flex-col">
-                    <span>Humidity</span>
-                    <span className="font-semibold">
-                      {weatherPasso?.main?.humidity}%
-                    </span>
-                  </div>
-                </div>
-
-                <div className=" p-4 rounded-xl text-2xl  flex gap-6 bg-opacity-80 items-center">
-                  <ThermometerSnowflake className="h-16 w-16" />
-                  <div className="flex flex-col">
-                    <span>Temp.</span>
-                    <span className="font-semibold">
-                      {roundNumber(weatherPasso?.main?.temp - 273.15)}&deg; C{" "}
-                    </span>
-                  </div>
+              <div className="p-4 text-2xl  flex gap-6 bg-opacity-80 items-center">
+                <Droplets className="h-16 w-16" />
+                <div className="flex flex-col">
+                  <span>Humidity</span>
+                  <span className="font-semibold">
+                    {weatherSirimau?.main?.humidity}%
+                  </span>
                 </div>
               </div>
-            </foreignObject>
-          )
-         }
 
-         {
-          weatherHativeBesar && (
-            <foreignObject x="500" y="160" width="250" height="500">
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-3xl font-semibold">Hative Besar</div>
-                <div className="p-4 text-gray-700 rounded-xl text-2xl  flex gap-6 items-center">
-                  <CloudRender name={weatherHativeBesar?.weather[0]?.main} />
-
-                  <div className="flex flex-col">
-                    <span>Weather</span>
-                    <span className="font-semibold">
-                      {weatherHativeBesar?.weather[0]?.main}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-4 text-2xl  flex gap-6 bg-opacity-80 items-center">
-                  <Droplets className="h-16 w-16" />
-                  <div className="flex flex-col">
-                    <span>Humidity</span>
-                    <span className="font-semibold">
-                      {weatherHativeBesar?.main?.humidity}%
-                    </span>
-                  </div>
-                </div>
-
-                <div className=" p-4 rounded-xl text-2xl  flex gap-6 bg-opacity-80 items-center">
-                  <ThermometerSnowflake className="h-16 w-16" />
-                  <div className="flex flex-col">
-                    <span>Temp.</span>
-                    <span className="font-semibold">
-                      {roundNumber(weatherHativeBesar?.main?.temp - 273.15)}&deg; C{" "}
-                    </span>
-                  </div>
+              <div className=" p-4 rounded-xl text-2xl  flex gap-6 bg-opacity-80 items-center">
+                <ThermometerSnowflake className="h-16 w-16" />
+                <div className="flex flex-col">
+                  <span>Temp.</span>
+                  <span className="font-semibold">
+                    {roundNumber(weatherSirimau?.main?.temp - 273.15)}&deg; C{" "}
+                  </span>
                 </div>
               </div>
-            </foreignObject>
-          )
-         }
+            </div>
+          </foreignObject>
+        )}
 
-         {
-          weatherWaai && (
-            <foreignObject x="750" y="160" width="250" height="500">
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-3xl font-semibold">Waai</div>
-                <div className="p-4 text-gray-700 rounded-xl text-2xl  flex gap-6 items-center">
-                  <CloudRender name={weatherWaai?.weather[0]?.main} />
+        {weatherPasso && (
+          <foreignObject x="250" y="160" width="250" height="500">
+            <div className="flex flex-col justify-center items-center">
+              <div className="text-3xl font-semibold">Passo</div>
+              <div className="p-4 text-gray-700 rounded-xl text-2xl  flex gap-6 items-center">
+                <WeatherInfo name={weatherPasso?.weather[0]?.main} />
 
-                  <div className="flex flex-col">
-                    <span>Weather</span>
-                    <span className="font-semibold">
-                      {weatherWaai?.weather[0]?.main}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-4 text-2xl  flex gap-6 bg-opacity-80 items-center">
-                  <Droplets className="h-16 w-16" />
-                  <div className="flex flex-col">
-                    <span>Humidity</span>
-                    <span className="font-semibold">
-                      {weatherWaai?.main?.humidity}%
-                    </span>
-                  </div>
-                </div>
-
-                <div className=" p-4 rounded-xl text-2xl  flex gap-6 bg-opacity-80 items-center">
-                  <ThermometerSnowflake className="h-16 w-16" />
-                  <div className="flex flex-col">
-                    <span>Temp.</span>
-                    <span className="font-semibold">
-                      {roundNumber(weatherWaai?.main?.temp - 273.15)}&deg; C{" "}
-                    </span>
-                  </div>
+                <div className="flex flex-col">
+                  <span>Weather</span>
+                  <span className="font-semibold">
+                    {weatherPasso?.weather[0]?.main}
+                  </span>
                 </div>
               </div>
-            </foreignObject>
-          )
-         }
+
+              <div className="p-4 text-2xl  flex gap-6 bg-opacity-80 items-center">
+                <Droplets className="h-16 w-16" />
+                <div className="flex flex-col">
+                  <span>Humidity</span>
+                  <span className="font-semibold">
+                    {weatherPasso?.main?.humidity}%
+                  </span>
+                </div>
+              </div>
+
+              <div className=" p-4 rounded-xl text-2xl  flex gap-6 bg-opacity-80 items-center">
+                <ThermometerSnowflake className="h-16 w-16" />
+                <div className="flex flex-col">
+                  <span>Temp.</span>
+                  <span className="font-semibold">
+                    {roundNumber(weatherPasso?.main?.temp - 273.15)}&deg; C{" "}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </foreignObject>
+        )}
+
+        {weatherHativeBesar && (
+          <foreignObject x="500" y="160" width="250" height="500">
+            <div className="flex flex-col justify-center items-center">
+              <div className="text-3xl font-semibold">Hative Besar</div>
+              <div className="p-4 text-gray-700 rounded-xl text-2xl  flex gap-6 items-center">
+                <WeatherInfo name={weatherHativeBesar?.weather[0]?.main} />
+
+                <div className="flex flex-col">
+                  <span>Weather</span>
+                  <span className="font-semibold">
+                    {weatherHativeBesar?.weather[0]?.main}
+                  </span>
+                </div>
+              </div>
+
+              <div className="p-4 text-2xl  flex gap-6 bg-opacity-80 items-center">
+                <Droplets className="h-16 w-16" />
+                <div className="flex flex-col">
+                  <span>Humidity</span>
+                  <span className="font-semibold">
+                    {weatherHativeBesar?.main?.humidity}%
+                  </span>
+                </div>
+              </div>
+
+              <div className=" p-4 rounded-xl text-2xl  flex gap-6 bg-opacity-80 items-center">
+                <ThermometerSnowflake className="h-16 w-16" />
+                <div className="flex flex-col">
+                  <span>Temp.</span>
+                  <span className="font-semibold">
+                    {roundNumber(weatherHativeBesar?.main?.temp - 273.15)}&deg;
+                    C{" "}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </foreignObject>
+        )}
+
+        {weatherWaai && (
+          <foreignObject x="750" y="160" width="250" height="500">
+            <div className="flex flex-col justify-center items-center">
+              <div className="text-3xl font-semibold">Waai</div>
+              <div className="p-4 text-gray-700 rounded-xl text-2xl  flex gap-6 items-center">
+                <WeatherInfo name={weatherWaai?.weather[0]?.main} />
+
+                <div className="flex flex-col">
+                  <span>Weather</span>
+                  <span className="font-semibold">
+                    {weatherWaai?.weather[0]?.main}
+                  </span>
+                </div>
+              </div>
+
+              <div className="p-4 text-2xl  flex gap-6 bg-opacity-80 items-center">
+                <Droplets className="h-16 w-16" />
+                <div className="flex flex-col">
+                  <span>Humidity</span>
+                  <span className="font-semibold">
+                    {weatherWaai?.main?.humidity}%
+                  </span>
+                </div>
+              </div>
+
+              <div className=" p-4 rounded-xl text-2xl  flex gap-6 bg-opacity-80 items-center">
+                <ThermometerSnowflake className="h-16 w-16" />
+                <div className="flex flex-col">
+                  <span>Temp.</span>
+                  <span className="font-semibold">
+                    {roundNumber(weatherWaai?.main?.temp - 273.15)}&deg; C{" "}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </foreignObject>
+        )}
 
         {/* Arus */}
         <foreignObject x="1770" y="560" width="125" height="200">

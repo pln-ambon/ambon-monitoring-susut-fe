@@ -10,4 +10,3 @@ export async function logoutRequest(): Promise<any> {
     return Promise.reject(error);
   }
 }
-
